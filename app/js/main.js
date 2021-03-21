@@ -61,23 +61,37 @@ document.addEventListener('DOMContentLoaded', () => {
 // });
 /////////end main screen tabs
 ////////////////////start slider Swiper////////////////////
-	let mySwiper = new Swiper('.sila__cont', {
+	let sila__thumbs = new Swiper('.sila__thumbs', {
 		containerModifierClass: 'sila__cont', 
 		wrapperClass: 'sila__wrap',
 		slideClass: 'sila__item',
-		parallax: false,
 		loop: false,
-		slidesPerView: 1,
-		spaceBetween: 0,
+		slidesPerView: 4,
+		spaceBetween: 40,
 		freeMode: false,
-		centeredSlides: true,
+		centeredSlides: false,
 		simulateTouch: true,
-		autoHeight: false,
-		navigation: {
-			nextEl: '.sila__button-next',
-			prevEl: '.sila__button-prev',
-		},
 	});
+	let mySwiper = new Swiper('.sila__top', {
+			containerModifierClass: 'sila__cont', 
+			wrapperClass: 'sila__wrap',
+			slideClass: 'sila__item',
+			parallax: false,
+			loop: false,
+			slidesPerView: 1,
+			spaceBetween: 0,
+			freeMode: false,
+			centeredSlides: true,
+			simulateTouch: true,
+			autoHeight: false,
+			navigation: {
+				nextEl: '.sila__button-next',
+				prevEl: '.sila__button-prev',
+			},
+			thumbs: {
+				swiper: sila__thumbs
+			}
+		});
 
 	const getParentPagination = document.querySelector('.sila__pagination');
 	const getCurentItem = document.querySelector('.sila__fraction-curent');

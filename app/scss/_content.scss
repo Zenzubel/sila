@@ -168,6 +168,7 @@
 	}
 	// .sila__inner
 	&__inner {
+		position: relative;
 		display: flex;
 		justify-content: flex-end;
 		align-items: flex-end;
@@ -179,15 +180,21 @@
 		max-height: 1080px;
 		overflow: hidden;
 		box-shadow: 0 7px 5px rgba(0, 0, 0, 0.07), 0 31px 21px rgba(0, 0, 0, 0.12), 0 80px 65px rgba(0, 0, 0, 0.19);
+		&.sila__thumbs {
+			box-shadow: none;
+		}
 	}
 	// .sila__wrap
 	&__wrap {
 		display: flex;
-		background-color: #c4c4c4;
 	}
 	// .sila__item
 	&__item {
 		flex-shrink: 0;
+		width: 100%;
+	}
+	// .sila__image
+	&__image {
 		width: 100%;
 		& source, img {
 			max-width: 100%;
@@ -195,13 +202,11 @@
 			object-position:center;
 		}
 	}
-	// .sila__image
-	&__image {
-	}
 	// .sila__navigations
 	&__navigations {
 		display: flex;
-		outline: 1px solid red;
+		height: 100%;
+		padding-bottom: 100px;
 	}
 	// .sila__pagination
 	&__pagination {
@@ -227,15 +232,12 @@
 		}
 	}
 	// .sila__fraction-curent
-	// .sila__fraction-total
-	&__fraction-curent, 
-	&__fraction-total {
-		color: #fff;
-	}
 	&__fraction-curent {
+		color: #fff;
 		font-size: 160px;
 		line-height: 180 / 160 * 100%;
 	}
+	// .sila__fraction-total
 	&__fraction-total {
 		font-size: 86px;
 		line-height: 120 / 86 * 100%;
@@ -289,6 +291,15 @@
 			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 75'%3E%3Cpolygon fill='%23fff' points='0.88,25.77 14.93,0.79 29.34,25.77 17.65,25.76 17.56,75.44 12.17,75.43 12.18,25.77 '/%3E%3C/svg%3E%0A");
 		}
 		
+	}
+	// .sila__wrap-thumbs
+	&__wrap-thumbs {
+	}
+	// .sila__thumbs
+	&__thumbs {
+		position: absolute;
+		bottom: 104px;
+		right: -135px;
 	}
 }
 //end sila
