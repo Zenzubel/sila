@@ -1,0 +1,57 @@
+@import "_null.scss";
+@import "_libs.scss";
+@import "_fonts.scss";
+
+body {
+	font-family: 'Montserrat', sans-serif;
+	color: #fff;
+	font-weight: 400;
+	font-size: 22px;
+	line-height: 33 / 22 * 100%;
+	&.lock {
+		overflow-x: hidden;
+	}
+}
+
+.wrapper {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	min-height: 100%;
+	overflow: hidden;
+}
+
+.content {
+	flex: 1 0 auto;
+	margin-right: 0;
+}
+
+.footer {
+	flex: 0 0 auto;
+}
+
+.container, 
+.container-fluid {
+	padding: 0 15px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+.container {
+	max-width: 1500px;
+	// outline: 1px solid red;
+}
+
+.container-fluid {
+	max-width: 1780px;
+	// outline: 1px solid green;
+	@media (max-width: 1500px) {
+		padding: 0;
+	};
+}
+
+@import "_global_style.scss";
+@import "_content.scss";
+
+

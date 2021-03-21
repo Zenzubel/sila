@@ -1,0 +1,110 @@
+.menu-burger {
+	// .menu-burger__icon
+	&__icon {
+		display: none;
+		width: 30px;
+		height: 20px;
+		position: relative;
+		transition-duration: 0.7s;
+		@media (max-width: 991.98px) {
+			display: block;
+			position: absolute;
+			right: 15px;
+			top: 30px;
+		}
+		&:before {
+			top: 0;
+		}
+		&:after {
+			bottom: 0;
+		}
+		&:before, &:after {
+			transform: rotate(0);
+			transition-duration: 0.3s;
+		}
+		&.active {
+			z-index: 7;
+			transition-duration: 0.7s;
+			&:before {
+				transform: translateY(0) rotate(-45deg);
+			}
+			&:after {
+				transform: translateY(0) rotate(45deg);
+			}
+			&:before, &:after {
+				background-color: #000;
+				transition-duration: 0.3s;
+				top: 50%;
+			}
+		}
+	}
+	&__middle {
+		top: 50%;
+		transform: translateY(-50%);
+		transition-duration: 0.7s;
+	}
+}
+
+.menu-burger__icon:before, .menu-burger__icon:after,
+.menu-burger__icon .menu-burger__middle {
+	position: absolute;
+	content: "";
+	left: 0;
+	height: 4px;
+	width: 30px;
+	background-color: #000;
+	display: inline-block;
+}
+.menu-burger__icon.active .menu-burger__middle {
+	transform: scale(0.1, 0.2);
+	transition-duration: 0.7s;
+}
+
+.menu-burger {
+	// .menu-burger__container
+	&__container {
+		display: none;
+		@media (max-width: 991.98px) {
+			display: block;
+			position: fixed;
+			z-index: 40;
+			top: -120%;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(0, 0, 0, 0.3);
+			backdrop-filter: blur(5px);
+			padding: 30px;
+			transition-duration: 0.6s;
+			&.active {
+				top: 0;
+				transition-duration: 0.6s;
+				overflow: auto;
+			}
+		};
+	}
+	// .menu-burger__list
+	&__list {
+		padding: 50px 0;
+	}
+	// .menu-burger__item
+	&__item {
+		width: 100%;
+		margin: 12px 0;
+		background-color: rgba(0, 0, 0, 0.4);
+	}
+	// .menu-burger__link
+	&__link {
+		text-align: center;
+		padding: 12px 0;
+		width: 100%;
+		color: #fff;
+		font-size: 32px;
+		font-style: normal;
+		font-weight: 600;
+		line-height: 40px;
+		@media (max-width: 1170px) {
+			font-size: calc(25px + (32 - 25) * ((100vw - 320px) / (1170 - 320)));
+		};
+	}
+}

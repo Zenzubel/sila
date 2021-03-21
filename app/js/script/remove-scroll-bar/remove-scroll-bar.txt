@@ -1,0 +1,24 @@
+scrollbar-width: none;
+.element::-webkit-scrollbar { width: 0 !important }
+.element { -ms-overflow-style: none; }
+.element { overflow: -moz-scrollbars-none; }
+::-webkit-scrollbar { width: 0;} - убрать скролл со всей страницы
+
+Скроллбары в Chrome/Edge/Safari
+body::-webkit-scrollbar {
+  width: 12px;               /* ширина scrollbar */
+}
+body::-webkit-scrollbar-track {
+  background: orange;        /* цвет дорожки */
+}
+body::-webkit-scrollbar-thumb {
+  background-color: blue;    /* цвет плашки */
+  border-radius: 20px;       /* закругления плашки */
+  border: 3px solid orange;  /* padding вокруг плашки */
+}
+
+Скроллбары в Firefox
+body {
+  scrollbar-width: thin;          /* "auto" или "thin"  */
+  scrollbar-color: blue orange;   /* плашка скролла и дорожка */ 
+}

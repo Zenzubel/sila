@@ -1,0 +1,129 @@
+//start-feedback
+.feedback {
+	position: relative;
+// .feedback__body
+	&__body {
+		width: 100%;
+		padding:100px 0;
+	}
+	// .feedback__container
+	&__container {
+		width: 100%;
+	}
+	// .feedback__wrapper
+	&__wrapper {
+		width: 100%;
+		display: flex;
+	}
+	// .feedback__parallax-bg
+	&__parallax-bg {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 130%;
+		height: 100%;
+		background: url('../../img/Animated Shape.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: cover;
+	}
+	// .feedback__item
+	&__item {
+		position: relative;
+		flex-shrink: 0;
+		width: 100%;
+		display: flex;
+		border-radius: 20px;
+		background-color: rgba(255, 255, 255, 0.05);
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(5px);
+	}
+		// .feedback__box
+	&__box {
+		display: flex;
+		align-items: center;
+		padding: 30px;
+	}
+	// .feedback__avatar
+	&__avatar {
+		overflow: hidden;
+		max-width: 150px;
+		& source, img {
+			border-radius: 50%;
+			width: 100%;
+			max-width: 250px;
+			object-fit: cover;
+			object-position:center;
+		}
+	}
+	// .feedback__text
+	&__text {
+		user-select: none;
+		padding: 30px;
+		color: #fff;
+		font-family: 'Raleway';
+		:first-child {
+			font-size: 20px;
+			font-weight: 600;
+			line-height: 30px;
+			margin-bottom: 15px;
+		};
+		& p {
+			display: block;
+			font-size: 16px;
+			font-weight: 400;
+			line-height: 22px;
+		}
+	}
+	// .feedback__scrollbar
+	&__scrollbar {
+		position: relative;
+		z-index: 20;
+		display: flex;
+		align-items: center;
+		margin-top: 30px;
+		border-radius: 20px;
+		background-color: rgba(255, 255, 255, 0.05);
+		box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+		backdrop-filter: blur(5px);
+		& .swiper-scrollbar-drag {
+			height: 8px;
+			background-color: rgba(255, 255, 255, 0.8);
+			box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+			border-radius: 5px;
+			cursor: pointer;
+		}
+	}
+	// .feedback__pagination
+	&__pagination {
+		position: relative;
+		z-index: 555;
+		width: 100%;
+	}
+	// .feedback__bullets
+	&__bullets {
+		position: absolute;
+		top: 0;
+		display: flex;
+		align-items: center;
+		outline: 1px solid red;
+		transition-duration: 0.3s;
+	}
+	// .feedback__bullet
+	&__bullet {
+		align-items: center;
+		justify-content: center;
+		border-radius: 50%;
+		transition-duration: 0.3s;
+		width: 100px;
+		height: 100px;
+		background-color: #333;
+		transform: scale(0.5);
+		&.active {
+			transition-duration: 0.3s;
+			background-color: tomato;
+			transform: scale(1);
+		}
+	}
+}
+//end-feedback

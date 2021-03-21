@@ -1,0 +1,49 @@
+.informations {
+	// .informations__form
+	&__form {
+		max-width: 500px;
+		margin: 0 auto;
+		padding: 50px;
+	}
+	// .informations__label
+	&__label {
+		display: block;
+		position: relative;
+		&--name, 
+		&--tel, 
+		&--email {
+			outline: 1px solid grey;
+			&.error {
+				outline: 1px solid red;
+			}
+			&.complete {
+				outline: 1px solid green;
+			}
+		}
+		&--button {}
+	}
+	// .informations__massage
+	&__massage {
+		position: absolute;
+		top: 3px;
+		right: 3px;
+		color: red;
+		font-size: 12px;
+	}
+	// .informations__input
+	&__input {
+		height: 40px;
+		padding: 0 10px;
+		width: 100%;
+	}
+	// .informations__shell
+	&__shell {
+		margin: 10px;
+	}
+	// .informations__button
+	&__button {
+		background-color: tomato;
+		padding: 15px;
+		width: 100%;
+	}
+}

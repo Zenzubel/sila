@@ -1,0 +1,3 @@
+data-aos="stroke-anim" - инициализация в HTML
+
+data-aos-once="true" - повтор анимации при повторном скролле

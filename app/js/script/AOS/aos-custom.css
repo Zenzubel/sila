@@ -1,0 +1,98 @@
+[data-aos][data-aos][data-aos-duration="1000"],
+body[data-aos-duration="1000"] [data-aos] {
+  -webkit-transition-duration: 1s;
+  -o-transition-duration: 1s;
+  transition-duration: 1s;
+}
+
+[data-aos^=fade][data-aos^=fade] {
+  opacity: 0;
+  -webkit-transition-property: opacity,-webkit-transform;
+  transition-property: opacity,-webkit-transform;
+  -o-transition-property: opacity,transform;
+  transition-property: opacity,transform;
+  transition-property: opacity,transform,-webkit-transform;
+}
+
+[data-aos^=fade][data-aos^=fade].aos-animate {
+  opacity: 1;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+}
+
+[data-aos=fade-up] {
+  -webkit-transform: translate3d(0, 100px, 0);
+  transform: translate3d(0, 100px, 0);
+}
+
+[data-aos=fade-down] {
+  -webkit-transform: translate3d(0, -100px, 0);
+  transform: translate3d(0, -100px, 0);
+}
+
+[data-aos=fade-right] {
+  -webkit-transform: translate3d(-100px, 0, 0);
+  transform: translate3d(-100px, 0, 0);
+}
+
+[data-aos=fade-left] {
+  -webkit-transform: translate3d(100px, 0, 0);
+  transform: translate3d(100px, 0, 0);
+}
+
+[data-aos=fade-up-right] {
+  -webkit-transform: translate3d(-100px, 100px, 0);
+  transform: translate3d(-100px, 100px, 0);
+}
+
+[data-aos=fade-up-left] {
+  -webkit-transform: translate3d(100px, 100px, 0);
+  transform: translate3d(100px, 100px, 0);
+}
+
+[data-aos=fade-down-right] {
+  -webkit-transform: translate3d(-100px, -100px, 0);
+  transform: translate3d(-100px, -100px, 0);
+}
+
+[data-aos=fade-down-left] {
+  -webkit-transform: translate3d(100px, -100px, 0);
+  transform: translate3d(100px, -100px, 0);
+}
+
+/*custom-animation*/
+[data-aos^=animation][data-aos^=animation] {
+  transition-property: transition-duration, transition-timing-function, transition-delay, stroke-dasharray, stroke-dashoffset;
+}
+
+ [data-aos=animation-welcome] {
+  stroke-dasharray: 417;
+  stroke-dashoffset: 417;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+ }
+
+ [data-aos=animation-welcome].aos-animate {
+  stroke-dashoffset: 0;
+ }
+
+  [data-aos^=mark][data-aos^=mark] {
+  transition-property: transition-duration, transition-timing-function, transition-delay, animation-fill-mode, animation-direction, stroke-dasharray, stroke-dashoffset;
+}
+
+ [data-aos=mark-up] {
+  stroke-dasharray: 273;
+  stroke-dashoffset: 273;
+  animation-duration: 2s;
+  animation-timing-function: linear;
+  animation-delay: 1.8s;
+  animation-direction: alternate;
+  animation-fill-mode: forwards;
+ }
+
+ [data-aos=mark-up].aos-animate {
+  stroke-dashoffset: 0;
+  animation-delay: 0s;
+  animation-duration: 0s;
+ }
