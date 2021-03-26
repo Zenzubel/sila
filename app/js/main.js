@@ -67,7 +67,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		slideClass: 'sila__item',
 		loop: false,
 		slidesPerView: 4,
-		spaceBetween: 40,
+		spaceBetween: 0,
 		freeMode: false,
 		centeredSlides: false,
 		simulateTouch: true,
@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
 			containerModifierClass: 'sila__cont', 
 			wrapperClass: 'sila__wrap',
 			slideClass: 'sila__item',
-			parallax: false,
+			direction: 'vertical',
 			loop: false,
 			slidesPerView: 1,
 			spaceBetween: 0,
@@ -92,11 +92,12 @@ document.addEventListener('DOMContentLoaded', () => {
 				swiper: sila__thumbs
 			}
 		});
-
+	//start custom autoheight
 	const getParentPagination = document.querySelector('.sila__pagination');
 	const getCurentItem = document.querySelector('.sila__fraction-curent');
 	const getTotalItem = document.querySelector('.sila__fraction-total');
-	const getCountItems = document.querySelectorAll('.sila__item');
+	const getMainSlider = document.querySelector('.sila__top');
+	const getCountItems = getMainSlider.querySelectorAll('.sila__item');
 
 	function startFruction(curent, total) {
 		getParentPagination.innerHTML = '';
@@ -113,6 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		let total = getCountItems.length;
 		startFruction(curent, total);
 	});
+	//start custom autoheight
 ////////////////////end slider Swiper////////////////////
 
 });
