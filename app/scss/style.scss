@@ -40,15 +40,10 @@ body {
 
 .container {
 	max-width: 1500px;
-	// outline: 1px solid red;
 }
 
 .container-fluid {
 	max-width: 1780px;
-	// outline: 1px solid green;
-	@media (max-width: 1500px) {
-		padding: 0;
-	};
 }
 
 @import "_global_style.scss";
