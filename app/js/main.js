@@ -116,5 +116,55 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 	//start custom autoheight
 ////////////////////end slider Swiper////////////////////
+//start slider swiper for galary
+	new Swiper('.galary__container-layout', {
+		containerModifierClass: 'galary__container-layout', 
+		wrapperClass: 'galary__wrapper-layout',
+		slideClass: 'galary__item-layout',
+		loop: true,
+		slidesPerView: 3,
+		spaceBetween: 7,
+		freeMode: false,
+		centeredSlides: false,
+		simulateTouch: true,
+		navigation: {
+			nextEl: '.galary__layout-btn',
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			764: {
+				spaceBetween: 22,
+			},
+		}
+	});
+	new Swiper('.galary__container-works', {
+		containerModifierClass: 'galary__container-works', 
+		wrapperClass: 'galary__wrapper-works',
+		slideClass: 'galary__item-works',
+		loop: true,
+		slidesPerView: 3,
+		spaceBetween: 7,
+		freeMode: false,
+		centeredSlides: false,
+		simulateTouch: true,
+		navigation: {
+			prevEl: '.galary__works-btn',
+		},
+		autoplay: {
+			delay: 2500,
+			disableOnInteraction: false,
+		},
+		breakpoints: {
+			764: {
+				spaceBetween: 22,
+			},
+		}
+	});
+//end slider swiper for galary
+
+
 
 });
