@@ -164,7 +164,47 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 //end slider swiper for galary
+//start map///
+ymaps.ready(init);
+var myMap;
+  function init () {
+    var myMap = new ymaps.Map("map", {
+      center:[55.05183597636104,82.9961395282764],
+      zoom: 17,
+      // Выключаем все управление картой
+      controls: ['zoomControl']
+    }); 
+    var myGeoObjects = [];
+    // Указываем координаты метки
+    myGeoObjects = new ymaps.Placemark([55.05183597636104,82.9961395282764],{
+      balloonContentHeader: 'ООО "СИЛА"',
+      balloonContentBody: `
+        - производство тротуарной плитки <br>
+        - МАФ <br>
+        - бордюры <br>
+        ул. Есенина, 1. Офис 28.
+      `,
+      balloonContentFooter: "+7-903-913-33-30",
+    },{
+      iconLayout: 'default#image',
+      iconImageHref: 'images/icons/map-location.svg', 
+      // Размеры иконки
+      iconImageSize: [50, 50],
+      // Смещение верхнего угла относительно основания иконки
+      iconImageOffset: [-25, -40]
+    });
 
+    var clusterer = new ymaps.Clusterer({
+      clusterDisableClickZoom: false,
+      clusterOpenBalloonOnClick: false,
+    });
+
+    clusterer.add(myGeoObjects);
+    myMap.geoObjects.add(clusterer);
+    // Отключим zoom
+    myMap.behaviors.disable('scrollZoom');
+  }
+//end map///
 
 
 });
