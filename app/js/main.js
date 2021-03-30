@@ -27,38 +27,42 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 ///////////end menu burger//////////
 /////////start main screen tabs
-// const tabBtn = document.querySelectorAll('.about__tab-title');
-// const tabList = document.querySelectorAll('.about__tab-list');
-// const tabParent = document.querySelector('.about__questions-wrapper');
+const tabParent = document.querySelectorAll('.cards__item');
 
-// function hideTab() {
-// 	tabBtn.forEach(item => {
-// 		item.classList.remove('active');
-// 	});
-// 	tabList.forEach(item => {
-// 		item.classList.remove('active');
-// 	});
-// }
+tabParent.forEach((item, i) => {
+	const tabBtn = item.querySelectorAll('.cards__color');
+	const tabList = item.querySelectorAll('.cards__count span');
 
-// function showTabs (i = 1){
-// 	tabList[i].classList.add('active');
-// }
+function hideTab() {
+	tabBtn.forEach(item => {
+		item.classList.remove('active');
+	});
+	tabList.forEach(item => {
+		item.classList.remove('active');
+	});
+}
 
-// hideTab();
-// showTabs();
+function showTabs (i = 0){
+	tabList[i].classList.add('active');
+	tabBtn[i].classList.add('active');
+}
 
-// tabParent.addEventListener('click', (event) => {
-// 	const target = event.target;
-// 	event.preventDefault();
-// 	if (target && target.classList.contains('about__tab-title')) {
-// 		tabBtn.forEach((item, i) => {
-// 			if (target == item) {
-// 				hideTab();
-// 				showTabs(i);
-// 			}
-// 		});
-// 	}
-// });
+hideTab();
+showTabs();
+
+	item.addEventListener('click', (event) => {
+		const target = event.target;
+		event.preventDefault();
+		if (target && target.classList.contains('cards__color')) {
+			tabBtn.forEach((item, i) => {
+				if (target == item) {
+					hideTab();
+					showTabs(i);
+				}
+			});
+		}
+	});
+});
 /////////end main screen tabs
 ////////////////////start slider Swiper////////////////////
 	let sila__thumbs = new Swiper('.sila__thumbs', {
