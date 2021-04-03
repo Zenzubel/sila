@@ -26,12 +26,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 ///////////end menu burger//////////
-/////////start main screen tabs
-const tabParent = document.querySelectorAll('.cards__item');
+/////////start galary cards price switch
+const tabParent = document.querySelectorAll('.cards__search'); /// + use in popup slider
 
 tabParent.forEach((item, i) => {
 	const tabBtn = item.querySelectorAll('.cards__color');
-	const tabList = item.querySelectorAll('.cards__count span');
+	const tabList = item.querySelectorAll('.cards__num');
 
 function hideTab() {
 	tabBtn.forEach(item => {
@@ -63,7 +63,7 @@ showTabs();
 		}
 	});
 });
-/////////end main screen tabs
+/////////end start galary cards price switch
 ////////////////////start slider Swiper////////////////////
 	let sila__thumbs = new Swiper('.sila__thumbs', {
 		containerModifierClass: 'sila__cont', 
@@ -209,6 +209,141 @@ var myMap;
     myMap.behaviors.disable('scrollZoom');
   }
 //end map///
+///start popup slider
 
+///start slider for popup
+function popupSlider() {
+	let popupSlider = new Swiper('.popup-slider__container', {
+		containerModifierClass: 'popup-slider__container', 
+		wrapperClass: 'popup-slider__wrapper',
+		slideClass: 'popup-slider__item',
+		loop: false,
+		slidesPerView: 1,
+		spaceBetween: 7,
+		freeMode: false,
+		centeredSlides: true,
+		simulateTouch: true,
+		navigation: {
+			prevEl: '.popup-slider__button-prev',
+			nextEl: '.popup-slider__button-next',
+		},
+	});
+}
+///end slider for popup
+// init slider on push button in card 'more foto'
+const sliderParent = document.querySelector('.popup-slider');
+const getPopupTrigger = document.querySelectorAll('.popup-link');
+
+getPopupTrigger.forEach((item, i) => {
+	item.addEventListener('click', ()=> {
+
+		let src = item.getAttribute('data-src');
+		console.log(src);
+
+		sliderParent.innerHTML = '';
+		sliderParent.innerHTML += `
+		<div class="popup-slider__container">
+			<div class="popup-slider__wrapper">
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}-1.jpg" type="image/webp">
+						<img src="${src}-1.jpg" alt="Плитка">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}-2.jpg" type="image/webp">
+						<img src="${src}-2.jpg" alt="Плитка">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}-3.jpg" type="image/webp">
+						<img src="${src}-3.jpg" alt="Плитка">
+					</picture>
+				</div>
+			</div>
+		</div>
+		<button class="popup-slider__button-prev"></button>
+		<button class="popup-slider__button-next"></button>
+		`;
+		popupSlider();
+	});
+});
+
+console.log();
+///end popup slider
+//start section borders tabs
+const tabBordersBtn = document.querySelectorAll('.borders__btn--trig');
+const tabBordersList = document.querySelectorAll('.cards__row--borders');
+const tabBordersParent = document.querySelector('.borders__buttons');
+
+function hideBordersTab() {
+	tabBordersBtn.forEach(item => {
+		item.classList.remove('active');
+	});
+	tabBordersList.forEach(item => {
+		item.classList.remove('active');
+	});
+}
+
+function showBordersTabs (i = 0){
+	tabBordersBtn[i].classList.add('active');
+	tabBordersList[i].classList.add('active');
+}
+
+hideBordersTab();
+showBordersTabs();
+
+
+tabBordersParent.addEventListener('click', (event) => {
+	const target = event.target;
+	event.preventDefault();
+	if (target && target.classList.contains('borders__btn--trig')) {
+		tabBordersBtn.forEach((item, i) => {
+			if (target == item) {
+				hideBordersTab();
+				showBordersTabs(i);
+			}
+		});
+	}
+});
+//end section borders tabs
+//start section borders mafs tabs
+const tabMafsBtn = document.querySelectorAll('.borders__btn--maf');
+const tabMafsList = document.querySelectorAll('.cards__maf-item');
+const tabMafsParent = document.querySelector('.borders__buttons--maf');
+
+function hideMafsTab() {
+	tabMafsBtn.forEach(item => {
+		item.classList.remove('active');
+	});
+	tabMafsList.forEach(item => {
+		item.classList.remove('active');
+	});
+}
+
+function showMafsTabs (i = 0){
+	tabMafsBtn[i].classList.add('active');
+	tabMafsList[i].classList.add('active');
+}
+
+hideMafsTab();
+showMafsTabs();
+
+
+tabMafsParent.addEventListener('click', (event) => {
+	const target = event.target;
+	event.preventDefault();
+	if (target && target.classList.contains('borders__btn')) {
+		tabMafsBtn.forEach((item, i) => {
+			if (target == item) {
+				hideMafsTab();
+				showMafsTabs(i);
+			}
+		});
+	}
+});
+//end section borders mafs tabs
 
 });
