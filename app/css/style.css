@@ -1092,6 +1092,9 @@ body.lock {
 
 .cards__maf-item.active {
   display: flex;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cards__item {
@@ -1350,11 +1353,11 @@ body.lock {
   margin: 10px;
   max-width: 256px;
   width: 100%;
-  background-color: #f5744f;
   color: #171717;
+  background-color: #f5744f;
+  border: 2px solid transparent;
   font-size: 20px;
   font-weight: 600;
-  border: none;
   outline: none;
   transition: all 0.3s ease 0s;
 }
@@ -1936,6 +1939,12 @@ body.lock {
 
   .catalog__text-row {
     display: flex;
+  }
+
+  .borders__btn:hover,
+  .borders__btn--trig:hover,
+  .borders__btn--maf:hover {
+    border: 2px solid rgba(40, 40, 52, 0.5);
   }
 
   .contacts__inner {

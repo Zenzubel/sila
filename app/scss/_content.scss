@@ -1005,6 +1005,9 @@
 		display: none;
 		&.active {
 			display: flex;
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: center;
 		}
 	}
 	// .cards__item
@@ -1320,18 +1323,18 @@
 		};
 	}
 	// .borders__btn
-	&__btn, ,
+	&__btn, 
 	&__btn--trig, 
 	&__btn--maf {
 		padding: 26px 0;
 		margin: 10px;
 		max-width: 256px;
 		width: 100%;
-		background-color: #f5744f;
 		color: #171717;
+		background-color: #f5744f;
+		border: 2px solid transparent;
 		font-size: 20px;
 		font-weight: 600;
-		border: none;
 		outline: none;
 		transition: all 0.3s ease 0s;
 		&.active {
@@ -1339,6 +1342,11 @@
 			box-shadow: 1px 3px 4px rgba(0, 0, 0, 0.05), 5px 15px 16px rgba(0, 0, 0, 0.07), 14px 40px 49px rgba(0, 0, 0, 0.12);
 			font-weight: 600;
 		}
+		@media (min-width: 991.98px) {
+			&:hover {
+				border: 2px solid rgba(40, 40, 52, .5);
+			}
+		};
 	}
 }
 //end borders
