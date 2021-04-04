@@ -1080,6 +1080,10 @@ body.lock {
   display: flex;
 }
 
+.cards__mafs-wrapper {
+  width: 100%;
+}
+
 .cards__maf-content {
   display: flex;
   flex-wrap: wrap;
@@ -1143,6 +1147,10 @@ body.lock {
   line-height: 180%;
 }
 
+.cards__subtitle :first-child {
+  margin-left: 10px;
+}
+
 .cards__subtitle span {
   font-weight: 500;
 }
@@ -1202,7 +1210,10 @@ body.lock {
 }
 
 .cards__colors {
-  margin: 27px 0 25px;
+  margin: 27px -10px 25px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
 }
 
 .cards__colors,
@@ -1213,16 +1224,52 @@ body.lock {
 .cards__color {
   width: 50px;
   height: 50px;
-  background-color: #e2e2e2;
+  margin: 10px;
+  background-color: #9c9c9c;
   transition: all 0.3s ease 0s;
-}
-
-.cards__color + .cards__color {
-  margin-left: 10px;
 }
 
 .cards__color.active {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
+}
+
+.cards__color--grey {
+  background-color: #9c9c9c;
+}
+
+.cards__color--red {
+  background-color: #de3a3a;
+}
+
+.cards__color--brown {
+  background-color: #996633;
+}
+
+.cards__color--yellow {
+  background-color: #fceb4c;
+}
+
+.cards__color--orange {
+  background-color: #fc8803;
+}
+
+.cards__color--beige {
+  background-color: #ffd2b3;
+}
+
+.cards__color--black {
+  background-color: #171717;
+}
+
+.cards__color--green {
+  background-color: #669933;
+}
+
+.cards__color--color-mix {
+  background-color: transparent;
+  background-position: center;
+  background-size: 50px 50px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpolygon fill='%239C9C9C' fill-rule='nonzero' points='25,0 0,0 25,25 '/%3E%3Cpolygon fill='%23DE3A3A' fill-rule='nonzero' points='50,0 25,0 25,25 '/%3E%3Cpolygon fill='%23996633' fill-rule='nonzero' points='50,25 50,0 25,25 '/%3E%3Cpolygon fill='%23FCEB4C' fill-rule='nonzero' points='50,50 50,25 25,25 '/%3E%3Cpolygon fill='%23FC8803' fill-rule='nonzero' points='25,50 50,50 25,25 '/%3E%3Cpolygon fill='%23FFD2B3' fill-rule='nonzero' points='0,50 25,50 25,25 '/%3E%3Cpolygon fill='%23171717' fill-rule='nonzero' points='0,25 0,50 25,25 '/%3E%3Cpolygon fill='%23669933' fill-rule='nonzero' points='0,0 0,25 25,25 '/%3E%3C/svg%3E%0A");
 }
 
 .cards__price {
@@ -1266,6 +1313,7 @@ body.lock {
 }
 
 .borders__wrapper {
+  overflow: hidden;
   position: relative;
   background-color: #f46036;
   padding-bottom: 110px;
@@ -2689,7 +2737,7 @@ body.lock {
   }
 
   .cards__colors {
-    margin: 5px 0 20px;
+    margin: 5px -10px 20px;
   }
 
   .cards__colors,

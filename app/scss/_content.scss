@@ -992,7 +992,7 @@
 	}
 	// .cards__mafs-wrapper
 	&__mafs-wrapper {
-
+		width: 100%;
 	}
 	// .cards__maf-content
 	&__maf-content {
@@ -1035,7 +1035,7 @@
 		& source, img {
 			max-width: 100%;
 			object-fit: cover;
-			object-position:center;
+			object-position: center;
 		}
 	}
 	// .cards__title
@@ -1054,6 +1054,9 @@
 		margin-top: 10px;
 		font-size: 18px;
 		line-height: 32.4 / 18 * 100%;
+		:first-child {
+			margin-left: 10px;
+		}
 		& span {
 			font-weight: 500;
 		}
@@ -1128,9 +1131,12 @@
 	}
 	// .cards__colors
 	&__colors {
-		margin: 27px 0 25px;
+		margin: 27px -10px 25px;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: flex-start;
 		@media (max-width: 479.98px) {
-			margin: 5px 0 20px;
+			margin: 5px -10px 20px;
 		};
 	}
 	&__colors, 
@@ -1145,19 +1151,45 @@
 	&__color {
 		width: 50px;
 		height: 50px;
-		background-color: #e2e2e2;
+		margin: 10px;
+		background-color: #9c9c9c;
 		transition: all 0.3s ease 0s;
-		+ .cards__color {
-			margin-left: 10px;
-		}
+		// + .cards__color {
+		// 	margin-left: 10px;
+		// }
 		&.active {
 			box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 		}
-		// @media (min-width: 991.98px) {
-		// 	&:hover {
-		// 		box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-		// 	}
-		// };
+		&--grey {
+			background-color: #9c9c9c;
+		}
+		&--red {
+			background-color: #de3a3a;
+		}
+		&--brown {
+			background-color: #996633;
+		}
+		&--yellow {
+			background-color: #fceb4c;
+		}
+		&--orange {
+			background-color: #fc8803;
+		}
+		&--beige {
+			background-color: #ffd2b3;
+		}
+		&--black {
+			background-color: #171717;
+		}
+		&--green {
+			background-color: #669933;
+		}
+		&--color-mix {
+			background-color: transparent;
+			background-position: center;
+			background-size: 50px 50px;
+			background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 50 50'%3E%3Cpolygon fill='%239C9C9C' fill-rule='nonzero' points='25,0 0,0 25,25 '/%3E%3Cpolygon fill='%23DE3A3A' fill-rule='nonzero' points='50,0 25,0 25,25 '/%3E%3Cpolygon fill='%23996633' fill-rule='nonzero' points='50,25 50,0 25,25 '/%3E%3Cpolygon fill='%23FCEB4C' fill-rule='nonzero' points='50,50 50,25 25,25 '/%3E%3Cpolygon fill='%23FC8803' fill-rule='nonzero' points='25,50 50,50 25,25 '/%3E%3Cpolygon fill='%23FFD2B3' fill-rule='nonzero' points='0,50 25,50 25,25 '/%3E%3Cpolygon fill='%23171717' fill-rule='nonzero' points='0,25 0,50 25,25 '/%3E%3Cpolygon fill='%23669933' fill-rule='nonzero' points='0,0 0,25 25,25 '/%3E%3C/svg%3E%0A");
+		}
 	}
 	// .cards__price
 	&__price {
@@ -1209,6 +1241,7 @@
 .borders {
 	// .borders__wrapper
 	&__wrapper {
+		overflow: hidden;
 		position: relative;
 		background-color: #f46036;
 		padding-bottom: 110px;
