@@ -64,6 +64,38 @@ showTabs();
 	});
 });
 /////////end start galary cards price switch
+///start open card discription//////
+ const allCardParent = document.querySelectorAll('.cards__item');
+
+allCardParent.forEach((item, i) => {
+	
+	const closeDiscrBtn = document.querySelectorAll('.cards__close-discription');
+	const openDiscrBtn = document.querySelectorAll('.cards__open-discription');
+	const textDiscription = document.querySelectorAll('.cards__discription-text');
+
+	item.addEventListener('click', (event) => {
+		const target = event.target;
+		event.preventDefault();
+		if (target && target.classList.contains('cards__open-discription')) {
+			openDiscrBtn.forEach((item, i) => {
+				if (target == item) {
+					closeDiscrBtn[i].classList.add('active');
+					textDiscription[i].classList.add('active');
+				}
+			});
+		}
+		if (target && target.classList.contains('cards__close-discription')) {
+			closeDiscrBtn.forEach((item, i) => {
+				if (target == item) {
+					closeDiscrBtn[i].classList.remove('active');
+					textDiscription[i].classList.remove('active');
+				}
+			});
+		}
+	});
+});
+ 
+///end open card discription//////
 ////////////////////start slider Swiper////////////////////
 	let sila__thumbs = new Swiper('.sila__thumbs', {
 		containerModifierClass: 'sila__cont', 
@@ -96,7 +128,7 @@ showTabs();
 				swiper: sila__thumbs
 			}
 		});
-	//start custom autoheight
+
 	const getParentPagination = document.querySelector('.sila__pagination');
 	const getCurentItem = document.querySelector('.sila__fraction-curent');
 	const getTotalItem = document.querySelector('.sila__fraction-total');
@@ -212,23 +244,26 @@ var myMap;
 ///start popup slider
 
 ///start slider for popup
-function popupSlider() {
-	let popupSlider = new Swiper('.popup-slider__container', {
-		containerModifierClass: 'popup-slider__container', 
-		wrapperClass: 'popup-slider__wrapper',
-		slideClass: 'popup-slider__item',
-		loop: false,
-		slidesPerView: 1,
-		spaceBetween: 7,
-		freeMode: false,
-		centeredSlides: true,
-		simulateTouch: true,
-		navigation: {
-			prevEl: '.popup-slider__button-prev',
-			nextEl: '.popup-slider__button-next',
-		},
-	});
-}
+	
+	function popupSlider() {
+		let popupSwiper = new Swiper('.popup-slider__container', {
+			containerModifierClass: 'popup-slider__container', 
+			wrapperClass: 'popup-slider__wrapper',
+			slideClass: 'popup-slider__item',
+			loop: false,
+			slidesPerView: 1,
+			spaceBetween: 7,
+			// autoHeight: true,
+			freeMode: false,
+			centeredSlides: true,
+			simulateTouch: true,
+			navigation: {
+				prevEl: '.popup-slider__button-prev',
+				nextEl: '.popup-slider__button-next',
+			},
+		});
+	}
+
 ///end slider for popup
 // init slider on push button in card 'more foto'
 const sliderParent = document.querySelector('.popup-slider');
@@ -246,20 +281,92 @@ getPopupTrigger.forEach((item, i) => {
 			<div class="popup-slider__wrapper">
 				<div class="popup-slider__item">
 					<picture class="popup-slider__image">
-						<source srcset="${src}-1.jpg" type="image/webp">
-						<img src="${src}-1.jpg" alt="Плитка">
+						<source srcset="${src}1.jpg" type="image/webp">
+						<img src="${src}1.jpg" alt="Изображение готового изделия или объекта">
 					</picture>
 				</div>
 				<div class="popup-slider__item">
 					<picture class="popup-slider__image">
-						<source srcset="${src}-2.jpg" type="image/webp">
-						<img src="${src}-2.jpg" alt="Плитка">
+						<source srcset="${src}2.jpg" type="image/webp">
+						<img src="${src}2.jpg" alt="Изображение готового изделия или объекта">
 					</picture>
 				</div>
 				<div class="popup-slider__item">
 					<picture class="popup-slider__image">
-						<source srcset="${src}-3.jpg" type="image/webp">
-						<img src="${src}-3.jpg" alt="Плитка">
+						<source srcset="${src}3.jpg" type="image/webp">
+						<img src="${src}3.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}4.jpg" type="image/webp">
+						<img src="${src}4.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}5.jpg" type="image/webp">
+						<img src="${src}5.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}6.jpg" type="image/webp">
+						<img src="${src}6.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}7.jpg" type="image/webp">
+						<img src="${src}7.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}8.jpg" type="image/webp">
+						<img src="${src}8.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}9.jpg" type="image/webp">
+						<img src="${src}9.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}10.jpg" type="image/webp">
+						<img src="${src}10.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}11.jpg" type="image/webp">
+						<img src="${src}11.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}12.jpg" type="image/webp">
+						<img src="${src}12.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}13.jpg" type="image/webp">
+						<img src="${src}13.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}14.jpg" type="image/webp">
+						<img src="${src}14.jpg" alt="Изображение готового изделия или объекта">
+					</picture>
+				</div>
+				<div class="popup-slider__item">
+					<picture class="popup-slider__image">
+						<source srcset="${src}15.jpg" type="image/webp">
+						<img src="${src}15.jpg" alt="Изображение готового изделия или объекта">
 					</picture>
 				</div>
 			</div>
@@ -270,6 +377,7 @@ getPopupTrigger.forEach((item, i) => {
 		popupSlider();
 	});
 });
+
 
 console.log();
 ///end popup slider

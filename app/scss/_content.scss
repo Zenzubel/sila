@@ -1017,6 +1017,8 @@
 	}
 	// .cards__item-inner
 	&__item-inner {
+		overflow: hidden;
+		position: relative;
 		display: flex;
 		flex-direction: column;
 		width: 100%;
@@ -1128,6 +1130,81 @@
 	// .cards__footer
 	&__footer {
 		flex: 0 0 auto;
+		position: relative;
+	}
+	// .cards__open
+	&__open {}
+	// .cards__open-discription
+	&__open-discription {
+		background-color: transparent;
+		color: #fff;
+		font-size: 22px;
+		padding: 10px 0;
+		margin-left: 45px;
+		transition: all 0.3s ease 0s;
+		&--margin {
+			margin-bottom: 30px;
+		}
+		@media (min-width: 991.98px) {
+			&:hover {
+				color: #f36036;
+			}
+		};
+		@media (max-width: 479.98px) {
+			margin-left: 20px;
+		};
+	}
+	// .cards__close-discription
+	&__close-discription {
+		position: absolute;
+		bottom: -100%;
+		left: 50%;
+		transform: translateX(-50%);
+		padding: 25px 0;
+		width: 100%;
+		font-size: 25px;
+		font-weight: 600;
+		color: #fff;
+		text-transform: uppercase;
+		background-color: #f36036;
+		transition-duration: 0.3s;
+		z-index: 50;
+		&.active {
+			bottom: 0;
+		}
+		@media (min-width: 991.98px) {
+			&:hover {
+				background-color: rgba(243, 96, 54, 0.5);
+			}
+		};
+	}
+	// .cards__discription-text
+	&__discription-text {
+		overflow: auto;
+		position: absolute;
+		top: -100%;
+		left: 0;
+		font-size: 24px;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(40, 40, 52, 0.9);
+		padding: 40px 30px 100px;
+		z-index: 10;
+		backdrop-filter: blur(5px);
+		transition: all 0.3s ease 0s;
+		& p {
+			margin-bottom: 20px;
+		}
+		&.active {
+			top: 0;
+		}
+		&::-moz-scrollbar {
+			width: 0;
+			height: 0;
+		}
+		@media (max-width: 1470px) {
+			font-size: calc(16px + (24 - 16) * ((100vw - 320px) / (1470 - 320)));
+		};
 	}
 	// .cards__colors
 	&__colors {
@@ -1279,10 +1356,10 @@
 			};
 		}
 		&:after {
-			top: -8%;
+			top: 0;
 			right: 0;
 			width: 88px;
-			height: 120%;
+			height: 95%;
 			background-color: #282834;
 			z-index: 50;
 			@media (max-width: 1470px) {
@@ -2036,13 +2113,19 @@
 	&__item {
 		flex-shrink: 0;
 		width: 100%;
+		background-image: url('../images/logo-slider-bg+.svg');
+		background-repeat: no-repeat;
+		background-position: center;
+		background-size: contain;
 	}
 	// .popup-slider__image
 	&__image {
 		width: 100%;
+		position: relative;
 		& source, img {
 			width: 100%;
-			object-fit: contain;
+			height: 100%;
+			object-fit: cover;
 			object-position: center;
 		}
 	}
