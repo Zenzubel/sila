@@ -125,3 +125,23 @@
 		font-size: calc(50px + (100 - 50) * ((100vw - 320px) / (1470 - 320)));
 	};
 }
+
+.sw-cont {
+	width: 100%;
+	overflow: hidden;
+}
+.sw-wrap {
+	width: 100%;
+	display: flex;
+}
+.sw-item {
+	flex-shrink: 0;
+}
+.sw-image {
+	width: 100%;
+	& source, img {
+		max-width: 100%;
+		object-fit: cover;
+		object-position:center;
+	}
+}

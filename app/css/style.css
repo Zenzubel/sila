@@ -296,6 +296,33 @@ body.lock {
   line-height: 130%;
 }
 
+.sw-cont {
+  width: 100%;
+  overflow: hidden;
+}
+
+.sw-wrap {
+  width: 100%;
+  display: flex;
+}
+
+.sw-item {
+  flex-shrink: 0;
+}
+
+.sw-image {
+  width: 100%;
+}
+
+.sw-image source,
+.sw-image img {
+  max-width: 100%;
+  -o-object-fit: cover;
+  object-fit: cover;
+  -o-object-position: center;
+  object-position: center;
+}
+
 .popup {
   position: fixed;
   width: 100%;
@@ -509,6 +536,7 @@ body.lock {
 
 .header__menu-link {
   color: #fff;
+  transition: all 0.3s ease 0s;
 }
 
 .sila__wrapper {
@@ -535,12 +563,55 @@ body.lock {
   font-size: 160px;
   font-weight: 900;
   z-index: 0;
+  -webkit-animation-duration: 0.65s;
+  animation-duration: 0.65s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-delay: 0.6s;
+  animation-delay: 0.6s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
 }
 
 .sila__inner:before {
   content: "ооо";
   top: 17%;
   left: -17.5%;
+  transform: translateX(-100%);
+  -webkit-animation-name: sila__inner-ooo;
+  animation-name: sila__inner-ooo;
+}
+
+@-webkit-keyframes sila__inner-ooo {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  70% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sila__inner-ooo {
+  0% {
+    transform: translateX(-100%);
+  }
+
+  70% {
+    transform: translateX(20%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .sila__inner:after {
@@ -550,11 +621,41 @@ body.lock {
   right: -11%;
   font-style: italic;
   text-transform: uppercase;
+  transform: translateX(110%);
+  -webkit-animation-name: sila__inner-sila;
+  animation-name: sila__inner-sila;
+}
+
+@-webkit-keyframes sila__inner-sila {
+  0% {
+    transform: translateX(100%);
+  }
+
+  70% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes sila__inner-sila {
+  0% {
+    transform: translateX(100%);
+  }
+
+  70% {
+    transform: translateX(-20%);
+  }
+
+  100% {
+    transform: translateX(0);
+  }
 }
 
 .sila__thumbs-wrap {
   overflow: hidden;
-  transform: translateX(75px);
 }
 
 .sila__top {
@@ -622,7 +723,6 @@ body.lock {
 }
 
 .sila__navigations {
-  position: relative;
   display: flex;
   height: 100%;
   z-index: 11;
@@ -852,7 +952,8 @@ body.lock {
   position: absolute;
   top: 0;
   left: 50%;
-  transform: translate(-50.5%, -150px);
+  transition: all 1.5s ease 0s;
+  transform: translate(250%, -150px);
   height: 100%;
   z-index: 0;
 }
@@ -967,6 +1068,8 @@ body.lock {
 
 .suggestion__item--attantion {
   padding: 0 80px;
+  transition: all 0.3s ease 0s;
+  transform: scale(0.7);
 }
 
 .suggestion__item--button {
@@ -1014,10 +1117,12 @@ body.lock {
 }
 
 .suggestion__btn:after {
+  transition: all 0.9s ease 1s;
   left: 50px;
   width: 142px;
   height: 142px;
   z-index: -1;
+  transform: translateY(-50%) rotate(180deg);
 }
 
 .catalog__wrapper {
@@ -1407,10 +1512,11 @@ body.lock {
 .borders__inner:after {
   top: 0;
   right: 0;
-  width: 88px;
+  width: 0;
   height: 95%;
   background-color: #282834;
   z-index: 50;
+  transition: all 1s ease 0s;
 }
 
 .borders__title-box {
@@ -1436,7 +1542,7 @@ body.lock {
   content: "";
   z-index: -1;
   bottom: 0;
-  left: 250px;
+  left: 0;
   height: 3px;
   width: 100%;
   background: linear-gradient(to right, white 0%, white 20%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0) 100%);
@@ -1494,13 +1600,13 @@ body.lock {
   line-height: 121.95122%;
 }
 
-.galary__slider__line {
+.galary__slider-line {
   display: flex;
   width: 100%;
   align-items: center;
 }
 
-.galary__slider__line--rewerse {
+.galary__slider-line--rewerse {
   flex-direction: row-reverse;
 }
 
@@ -1521,35 +1627,25 @@ body.lock {
 
 .galary__container-layout,
 .galary__container-works {
-  width: 100%;
   max-width: 1397px;
-  overflow: hidden;
-}
-
-.galary__wrapper-layout,
-.galary__wrapper-works {
-  width: 100%;
-  display: flex;
 }
 
 .galary__item-layout,
 .galary__item-works {
-  flex-shrink: 0;
   width: 100%;
   max-width: 451px;
+  position: relative;
 }
 
-.galary__image {
+.galary__item-layout:before,
+.galary__item-works:before {
+  position: absolute;
+  content: "";
+  top: 0;
+  left: 0;
   width: 100%;
-}
-
-.galary__image source,
-.galary__image img {
-  max-width: 100%;
-  -o-object-fit: cover;
-  object-fit: cover;
-  -o-object-position: center;
-  object-position: center;
+  height: 100%;
+  z-index: 5;
 }
 
 .galary__works-btn,
@@ -1995,6 +2091,18 @@ body.lock {
 }
 
 @media (min-width: 991.98px) {
+  .header__phone-link {
+    transition: all 0.3s ease 0s;
+  }
+
+  .header__phone-link:hover {
+    border: 2px solid #f46036;
+  }
+
+  .header__menu-link:hover {
+    color: #f46036;
+  }
+
   .sila__btn:hover {
     -webkit-animation-name: stars;
     animation-name: stars;
@@ -2132,6 +2240,469 @@ body.lock {
   }
 }
 
+@media (min-width: 1290px) {
+  .header {
+    -webkit-animation-name: header;
+    animation-name: header;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+  }
+
+@-webkit-keyframes header {
+    0% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes header {
+    0% {
+      opacity: 0;
+    }
+
+    80% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
+  .sila__thumbs-wrap {
+    transform: translateX(1500px);
+    opacity: 0;
+    -webkit-animation-name: sila__thumbs-wrap;
+    animation-name: sila__thumbs-wrap;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+@-webkit-keyframes sila__thumbs-wrap {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(75px);
+    }
+}
+
+@keyframes sila__thumbs-wrap {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(75px);
+    }
+}
+
+  .sila__top {
+    -webkit-animation-name: sila__top;
+    animation-name: sila__top;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+  }
+
+@-webkit-keyframes sila__top {
+    0% {
+      transform: scale(1.2);
+    }
+
+    80% {
+      transform: scale(0.9);
+    }
+
+    90% {
+
+    }
+
+    100% {
+      transform: scale(1);
+    }
+}
+
+@keyframes sila__top {
+    0% {
+      transform: scale(1.2);
+    }
+
+    80% {
+      transform: scale(0.9);
+    }
+
+    90% {
+
+    }
+
+    100% {
+      transform: scale(1);
+    }
+}
+
+  .sila__title {
+    -webkit-animation-name: sila__title;
+    animation-name: sila__title;
+    -webkit-animation-duration: 1.3s;
+    animation-duration: 1.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+  }
+
+@-webkit-keyframes sila__title {
+    0% {
+      transform: translateX(-10%);
+    }
+
+    20% {
+      transform: translateX(0%);
+    }
+
+    40% {
+      transform: translateX(4%);
+    }
+
+    60% {
+      transform: translateX(0%);
+    }
+
+    80% {
+      transform: translateX(7%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+}
+
+@keyframes sila__title {
+    0% {
+      transform: translateX(-10%);
+    }
+
+    20% {
+      transform: translateX(0%);
+    }
+
+    40% {
+      transform: translateX(4%);
+    }
+
+    60% {
+      transform: translateX(0%);
+    }
+
+    80% {
+      transform: translateX(7%);
+    }
+
+    100% {
+      transform: translateX(0);
+    }
+}
+
+  .sila__subtitle {
+    -webkit-animation-name: sila__subtitle;
+    animation-name: sila__subtitle;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: none;
+    animation-fill-mode: none;
+  }
+
+@-webkit-keyframes sila__subtitle {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
+@keyframes sila__subtitle {
+    0% {
+      opacity: 0;
+    }
+
+    50% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+    }
+}
+
+  .sila__button-cont {
+    transform: translateX(-10%);
+    opacity: 0;
+    -webkit-animation-name: sila__button-cont;
+    animation-name: sila__button-cont;
+    -webkit-animation-duration: 1s;
+    animation-duration: 1s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+@-webkit-keyframes sila__button-cont {
+    0% {
+      transform: translateX();
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    70% {
+      transform: translateX(10%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes sila__button-cont {
+    0% {
+      transform: translateX();
+    }
+
+    50% {
+      opacity: 1;
+    }
+
+    70% {
+      transform: translateX(10%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+  .about__bg-image.active-anim {
+    transform: translate(-50.5%, -150px);
+  }
+
+  .about__image--absolut {
+    transform: translateX(-70px);
+  }
+
+  .about__image--static {
+    margin-right: -70px;
+  }
+
+  .about__image--absolut,
+  .about__image--static {
+    transition: all 0.3s ease 1s;
+  }
+
+  .about__image--absolut.active-anim,
+  .about__image--static.active-anim {
+    transform: translateX(0);
+    margin-right: 0;
+  }
+
+  .suggestion__item--attantion.active-anim {
+    -webkit-animation-name: stars;
+    animation-name: stars;
+    -webkit-animation-duration: 0.6s;
+    animation-duration: 0.6s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+@-webkit-keyframes stars {
+    0% {
+      transform: scale(0.7);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+}
+
+@keyframes stars {
+    0% {
+      transform: scale(0.7);
+    }
+
+    50% {
+      transform: scale(1.2);
+    }
+
+    100% {
+      transform: scale(1);
+    }
+}
+
+  .suggestion__btn.active-anim:after {
+    transform: translateY(-50%) rotate(0);
+  }
+
+  .borders__inner.active-anim:after {
+    width: 88px;
+  }
+
+  .borders__title-box img {
+    transition: all 0.6s ease 0s;
+    transform: rotate(180deg);
+  }
+
+  .borders__title-box img.active-anim {
+    transform: rotate(0);
+  }
+
+  .borders__title {
+    transition: all 0.6s ease 0s;
+    transform: translateX(25%);
+  }
+
+  .borders__title.active-anim {
+    transform: translateY(0);
+  }
+
+  .borders__title.active-anim:after {
+    left: 250px;
+  }
+}
+
+@media (min-width: 1750px) {
+  .sila__navigations {
+    transform: translateX(50%);
+    opacity: 0;
+    -webkit-animation-name: sila__navigations;
+    animation-name: sila__navigations;
+    -webkit-animation-duration: 0.5s;
+    animation-duration: 0.5s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
+  }
+
+@-webkit-keyframes sila__navigations {
+    20% {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+
+    70% {
+      transform: translateX(-10%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes sila__navigations {
+    20% {
+      transform: translateX(50%);
+      opacity: 0;
+    }
+
+    70% {
+      transform: translateX(-10%);
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+}
+
 @media (min-width: 1920px) {
   .contacts__map-container {
     padding-bottom: 550px;
@@ -2146,9 +2717,31 @@ body.lock {
 
 @media (max-width: 1750px) {
   .sila__thumbs-wrap {
-    transform: translateX(0);
+    transform: translateX(-1500);
     width: 100%;
   }
+
+@-webkit-keyframes sila__thumbs-wrap {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
+
+@keyframes sila__thumbs-wrap {
+    0% {
+      opacity: 0;
+    }
+
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+}
 
   .sila__navigations {
     padding-left: 55px;
@@ -2454,7 +3047,7 @@ body.lock {
     justify-content: flex-start;
     margin-top: 30px;
     position: absolute;
-    bottom: 15px;
+    bottom: 0;
     right: 15px;
     height: auto;
   }
