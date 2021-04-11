@@ -2,27 +2,27 @@
 .header {
 	position: relative;
 	z-index: 1100;
-
-	@media (min-width: 1290px) {
-		animation-name: header;
-		animation-duration: 1s;
-		animation-timing-function: linear;
-		animation-delay: 0s;
-		animation-iteration-count: 1;
-		animation-direction: alternate;
-		animation-fill-mode: none;
-		@keyframes header {
-			0% {
-				opacity: 0;
+	opacity: 1;
+	&.anim {
+		@media (min-width: 1290px) {
+			opacity: 0;
+			animation-name: header;
+			animation-duration: 1s;
+			animation-timing-function: linear;
+			animation-delay: 5s;
+			animation-iteration-count: 1;
+			animation-direction: alternate;
+			animation-fill-mode: forwards;
+			@keyframes header {
+				0% {
+					opacity: 0;
+				}
+				100% {
+					opacity: 1;
+				}
 			}
-			80% {
-				opacity: 0;
-			}
-			100% {
-				opacity: 1;
-			}
-		}
-	};
+		};
+	}
 	// .header__wrapper
 	&__wrapper {
 		position: fixed;
@@ -221,32 +221,11 @@
 			font-size: 160px;
 			font-weight: 900;
 			z-index: 0;
-
-			animation-duration: 0.65s;
-			animation-timing-function: linear;
-			animation-delay: 0.6s;
-			animation-iteration-count: 1;
-			animation-direction: alternate;
-			animation-fill-mode: forwards;
 		}
 		&:before {
 			content: "ооо";
 			top: 17%;
 			left: -17.5%;
-			transform: translateX(-100%);
-
-			animation-name: sila__inner-ooo;
-			@keyframes sila__inner-ooo {
-				0% {
-				transform: translateX(-100%);
-				}
-				70% {
-					transform: translateX(20%);
-				}
-				100% {
-					transform: translateX(0);
-				}
-			}
 			@media (max-width: 1500px) {
 				display: none;
 			};
@@ -258,90 +237,121 @@
 			right: -11%;
 			font-style: italic;
 			text-transform: uppercase;
-			transform: translateX(110%);
-
-			animation-name: sila__inner-sila;
-			@keyframes sila__inner-sila {
-				0% {
-				transform: translateX(100%);
-				}
-				70% {
-					transform: translateX(-20%);
-				}
-				100% {
-					transform: translateX(0);
-				}
-			}
 			@media (max-width: 1290px) {
 				display: none;
 			};
+		}
+		&.anim {
+			&:before, 
+			&:after {
+				opacity: 0;
+				animation-duration: 0.65s;
+				animation-timing-function: linear;
+				animation-delay: 5.6s;
+				animation-iteration-count: 1;
+				animation-direction: alternate;
+				animation-fill-mode: forwards;
+			}
+			&:before {
+				transform: translateX(-100%);
+				animation-name: sila__inner-ooo;
+				@keyframes sila__inner-ooo {
+					0% {
+					transform: translateX(-100%);
+					}
+					70% {
+						transform: translateX(20%);
+					}
+					100% {
+						transform: translateX(0);
+						opacity: 1;
+					}
+				}
+			}
+			&:after {
+				transform: translateX(110%);
+				animation-name: sila__inner-sila;
+				@keyframes sila__inner-sila {
+					0% {
+					transform: translateX(100%);
+					}
+					70% {
+						transform: translateX(-20%);
+					}
+					100% {
+						transform: translateX(0);
+						opacity: 1;
+					}
+				}
+			}
 		}
 	}
 	// .sila__thumbs-wrap
 	&__thumbs-wrap {
 		overflow: hidden;
-		@media (max-width: 1750px) {
-			transform: translateX(-1500);
-			width: 100%;
-			@keyframes sila__thumbs-wrap {
-				0% {
-					opacity: 0;
-				}
-				100% {
-					opacity: 1;
-					transform: translateX(0);
-				}
-			}
-		};
-		@media (min-width: 1290px) {
-			transform: translateX(1500px);
-			opacity: 0;
-
-			animation-name: sila__thumbs-wrap;
-			animation-duration: 0.5s;
-			animation-timing-function: linear;
-			animation-delay: 1s;
-			animation-iteration-count: 1;
-			animation-direction: alternate;
-			animation-fill-mode: forwards;
-			@keyframes sila__thumbs-wrap {
-				0% {
-					opacity: 0;
+		&.anim {
+			@media (max-width: 1750px) {
+				transform: translateX(-1500);
+				width: 100%;
+				@keyframes sila__thumbs-wrap {
+					0% {
+						opacity: 0;
 					}
-				100% {
-					opacity: 1;
-					transform: translateX(75px);
+					100% {
+						opacity: 1;
+						transform: translateX(0);
+					}
 				}
-			}
-		};
+			};
+			@media (min-width: 1290px) {
+				transform: translateX(1500px);
+				opacity: 0;
+				animation-name: sila__thumbs-wrap;
+				animation-duration: 0.5s;
+				animation-timing-function: linear;
+				animation-delay: 6s;
+				animation-iteration-count: 1;
+				animation-direction: alternate;
+				animation-fill-mode: forwards;
+				@keyframes sila__thumbs-wrap {
+					0% {
+						opacity: 0;
+						}
+					100% {
+						opacity: 1;
+						transform: translateX(75px);
+					}
+				}
+			};
+		}
 	}
 	// .sila__top
 	&__top {
 		position: relative;
 		z-index: 1;
-		@media (min-width: 1290px) {
-			animation-name: sila__top;
-			animation-duration: 0.6s;
-			animation-timing-function: linear;
-			animation-delay: 0s;
-			animation-iteration-count: 1;
-			animation-direction: alternate;
-			animation-fill-mode: none;
-			@keyframes sila__top {
-				0% {
-					transform: scale(1.2);
+		&.anim {
+			transform: scale(1.1);
+			@media (min-width: 1290px) {
+				animation-name: sila__top;
+				animation-duration: 0.6s;
+				animation-timing-function: linear;
+				animation-delay: 5s;
+				animation-iteration-count: 1;
+				animation-direction: alternate;
+				animation-fill-mode: forwards;
+				@keyframes sila__top {
+					0% {
+						transform: scale(1.1);
+					}
+					80% {
+						transform: scale(0.9);
+					}
+					100% {
+						transform: scale(1);
+					}
 				}
-				80% {
-					transform: scale(0.9);
-				}
-				90% {
-
-				}
-				100% {
-					transform: scale(1);
-				}
-			}
-		};
+			};
+		}
 	}
 	// .sila__cont
 	&__cont {
@@ -421,31 +431,32 @@
 		display: flex;
 		height: 100%;
 		z-index: 11;
-		@media (min-width: 1750px) {
-			transform: translateX(50%);
-			opacity: 0;
-
-			animation-name: sila__navigations;
-			animation-duration: 0.5s;
-			animation-timing-function: linear;
-			animation-delay: 1s;
-			animation-iteration-count: 1;
-			animation-direction: alternate;
-			animation-fill-mode: forwards;
-			@keyframes sila__navigations {
-				20% {
-					transform: translateX(50%);
-					opacity: 0;
+		&.anim {
+			@media (min-width: 1750px) {
+				transform: translateX(50%);
+				opacity: 0;
+				animation-name: sila__navigations;
+				animation-duration: 0.5s;
+				animation-timing-function: linear;
+				animation-delay: 6s;
+				animation-iteration-count: 1;
+				animation-direction: alternate;
+				animation-fill-mode: forwards;
+				@keyframes sila__navigations {
+					20% {
+						transform: translateX(50%);
+						opacity: 0;
+					}
+					70% {
+						transform: translateX(-10%);
+					}
+					100% {
+						opacity: 1;
+						transform: translateX(0);
+					}
 				}
-				70% {
-					transform: translateX(-10%);
-				}
-				100% {
-					opacity: 1;
-					transform: translateX(0);
-				}
-			}
-		};
+			};
+		}
 		@media (max-width: 1750px) {
 			padding-left: 55px;
 		};
@@ -660,35 +671,29 @@
 				font-size: calc(35px + (135 - 35) * ((100vw - 320px) / (1470 - 320)));
 			};
 		}
-		@media (min-width: 1290px) {
-			animation-name: sila__title;
-			animation-duration: 1.3s;
-			animation-timing-function: linear;
-			animation-delay: 0s;
-			animation-iteration-count: 1;
-			animation-direction: alternate;
-			animation-fill-mode: none;
-			@keyframes sila__title {
-				0% {
-					transform: translateX(-10%);
+		&.anim {
+			@media (min-width: 1290px) {
+				transform: translateX(-40%);
+				animation-name: sila__title;
+				animation-duration: 1.3s;
+				animation-timing-function: linear;
+				animation-delay: 5s;
+				animation-iteration-count: 1;
+				animation-direction: alternate;
+				animation-fill-mode: forwards;
+				@keyframes sila__title {
+					0% {
+						transform: translateX(-40%);
+					}
+					80% {
+						transform: translateX(7%);
+					}
+					100% {
+						transform: translateX(0);
+					}
 				}
-				20% {
-					transform: translateX(0%);
-				}
-				40% {
-					transform: translateX(4%);
-				}
-				60% {
-					transform: translateX(0%);
-				}
-				80% {
-					transform: translateX(7%);
-				}
-				100% {
-					transform: translateX(0);
-				}
-			}
-		};
+			};
+		}
 	}
 	// .sila__subtitle
 	&__subtitle {
@@ -699,27 +704,28 @@
 		@media (max-width: 1470px) {
 			font-size: calc(16px + (50 - 16) * ((100vw - 320px) / (1470 - 320)));
 		};
-		@media (min-width: 1290px) {
-			animation-name: sila__subtitle;
-			animation-duration: 1s;
-			animation-timing-function: linear;
-			animation-delay: 0s;
-			animation-iteration-count: 1;
-			animation-direction: alternate;
-			animation-fill-mode: none;
-			@keyframes sila__subtitle {
-				0% {
-					opacity: 0;
+		&.anim {
+			@media (min-width: 1290px) {
+				animation-name: sila__subtitle;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+				animation-delay: 5s;
+				animation-iteration-count: 1;
+				animation-direction: alternate;
+				animation-fill-mode: none;
+				@keyframes sila__subtitle {
+					0% {
+						opacity: 0;
+					}
+					50% {
+						opacity: 0;
+					}
+					100% {
+						opacity: 1;
+					}
 				}
-				50% {
-					opacity: 0;
-				}
-				100% {
-					opacity: 1;
-				}
-			}
-		};
-
+			};
+		}
 	}
 	// .sila__button-wrap
 	&__button-wrap {
@@ -732,36 +738,36 @@
 	&__button-cont {
 		flex: 0 1 37%;
 		padding: 60px 0 50px;
+		&.anim {
+			@media (min-width: 1290px) {
+				transform: translateX(-10%);
+				opacity: 0;
+				animation-name: sila__button-cont;
+				animation-duration: 1s;
+				animation-timing-function: linear;
+				animation-delay: 6.5s;
+				animation-iteration-count: 1;
+				animation-direction: alternate;
+				animation-fill-mode: forwards;
+				@keyframes sila__button-cont {
+					0% {
+						transform: translateX();
+					}
+					50% {
+						opacity: 1;
+					}
+					70% {
+						transform: translateX(10%);
+					}
+					100% {
+						opacity: 1;
+						transform: translateX(0);
+					}
+				}
+			};
+		}
 		@media (max-width: 1290px) {
 			flex: 0 1 90%;
-		};
-		@media (min-width: 1290px) {
-			transform: translateX(-10%);
-			opacity: 0;
-
-			animation-name: sila__button-cont;
-			animation-duration: 1s;
-			animation-timing-function: linear;
-			animation-delay: 1.5s;
-			animation-iteration-count: 1;
-			animation-direction: alternate;
-			animation-fill-mode: forwards;
-			@keyframes sila__button-cont {
-				0% {
-					transform: translateX();
-				}
-				50% {
-					opacity: 1;
-					
-				}
-				70% {
-					transform: translateX(10%);
-				}
-				100% {
-					opacity: 1;
-					transform: translateX(0);
-				}
-			}
 		};
 		@media (max-width: 767.98px) {
 			padding: 40px 0 0;
@@ -813,14 +819,14 @@
 		}
 		@media (min-width: 991.98px) {
 			&:hover {
-				animation-name: stars;
+				animation-name: sila__btn;
 				animation-duration: 0.3s;
 				animation-timing-function: linear;
-				animation-delay: 0s;
+				animation-delay: 5s;
 				animation-iteration-count: 1;
 				animation-direction: alternate;
-				animation-fill-mode: none;
-				@keyframes stars {
+				animation-fill-mode: forwards;
+				@keyframes sila__btn {
 					0% {
 						transform: translateX(0);
 					}
@@ -1005,7 +1011,6 @@
 			}
 			&--static {
 				margin-right: -70px;
-
 			}
 			&--absolut, 
 			&--static {
@@ -1062,14 +1067,14 @@
 			};
 			@media (min-width: 1290px) {
 				&.active-anim {
-					animation-name: stars;
+					animation-name: suggestion__item;
 					animation-duration: 0.6s;
 					animation-timing-function: linear;
 					animation-delay: 0s;
 					animation-iteration-count: 1;
 					animation-direction: alternate;
 					animation-fill-mode: forwards;
-					@keyframes stars {
+					@keyframes suggestion__item {
 						0% {
 							transform: scale(0.7);
 						}

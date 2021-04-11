@@ -288,6 +288,77 @@ body.lock {
   font-weight: 700;
 }
 
+.main-screen-animate-box {
+  width: 100%;
+  height: 100%;
+}
+
+.main-screen-animate {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 100vh;
+  opacity: 1;
+  z-index: 2000;
+  background-color: #25252f;
+}
+
+.main-screen-animate.anim {
+  -webkit-animation-name: main-screen-animate;
+  animation-name: main-screen-animate;
+  -webkit-animation-duration: 5s;
+  animation-duration: 5s;
+  -webkit-animation-timing-function: linear;
+  animation-timing-function: linear;
+  -webkit-animation-delay: 0.1s;
+  animation-delay: 0.1s;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-direction: alternate;
+  animation-direction: alternate;
+  -webkit-animation-fill-mode: forwards;
+  animation-fill-mode: forwards;
+}
+
+@-webkit-keyframes main-screen-animate {
+  0% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    z-index: -10;
+    opacity: 0;
+  }
+}
+
+@keyframes main-screen-animate {
+  0% {
+    opacity: 1;
+    width: 100%;
+  }
+
+  90% {
+    opacity: 1;
+  }
+
+  100% {
+    z-index: -10;
+    opacity: 0;
+  }
+}
+
+.main-screen-animate.hide {
+  display: none;
+  z-index: -10;
+  opacity: 0;
+}
+
 .title {
   text-shadow: 0 7px 5px rgba(0, 0, 0, 0.07), 0 31px 21px rgba(0, 0, 0, 0.12), 0 80px 65px rgba(0, 0, 0, 0.19);
   color: #282834;
@@ -417,6 +488,7 @@ body.lock {
 .header {
   position: relative;
   z-index: 1100;
+  opacity: 1;
 }
 
 .header__wrapper {
@@ -563,12 +635,32 @@ body.lock {
   font-size: 160px;
   font-weight: 900;
   z-index: 0;
+}
+
+.sila__inner:before {
+  content: "ооо";
+  top: 17%;
+  left: -17.5%;
+}
+
+.sila__inner:after {
+  color: #171717;
+  content: "«SILA»";
+  top: 29%;
+  right: -11%;
+  font-style: italic;
+  text-transform: uppercase;
+}
+
+.sila__inner.anim:before,
+.sila__inner.anim:after {
+  opacity: 0;
   -webkit-animation-duration: 0.65s;
   animation-duration: 0.65s;
   -webkit-animation-timing-function: linear;
   animation-timing-function: linear;
-  -webkit-animation-delay: 0.6s;
-  animation-delay: 0.6s;
+  -webkit-animation-delay: 5.6s;
+  animation-delay: 5.6s;
   -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
   -webkit-animation-direction: alternate;
@@ -577,10 +669,7 @@ body.lock {
   animation-fill-mode: forwards;
 }
 
-.sila__inner:before {
-  content: "ооо";
-  top: 17%;
-  left: -17.5%;
+.sila__inner.anim:before {
   transform: translateX(-100%);
   -webkit-animation-name: sila__inner-ooo;
   animation-name: sila__inner-ooo;
@@ -597,6 +686,7 @@ body.lock {
 
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -611,16 +701,11 @@ body.lock {
 
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
-.sila__inner:after {
-  color: #171717;
-  content: "«SILA»";
-  top: 29%;
-  right: -11%;
-  font-style: italic;
-  text-transform: uppercase;
+.sila__inner.anim:after {
   transform: translateX(110%);
   -webkit-animation-name: sila__inner-sila;
   animation-name: sila__inner-sila;
@@ -637,6 +722,7 @@ body.lock {
 
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -651,6 +737,7 @@ body.lock {
 
   100% {
     transform: translateX(0);
+    opacity: 1;
   }
 }
 
@@ -661,6 +748,10 @@ body.lock {
 .sila__top {
   position: relative;
   z-index: 1;
+}
+
+.sila__top.anim {
+  transform: scale(1.1);
 }
 
 .sila__cont {
@@ -2104,23 +2195,23 @@ body.lock {
   }
 
   .sila__btn:hover {
-    -webkit-animation-name: stars;
-    animation-name: stars;
+    -webkit-animation-name: sila__btn;
+    animation-name: sila__btn;
     -webkit-animation-duration: 0.3s;
     animation-duration: 0.3s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-    -webkit-animation-fill-mode: none;
-    animation-fill-mode: none;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
   }
 
-@-webkit-keyframes stars {
+@-webkit-keyframes sila__btn {
     0% {
       transform: translateX(0);
     }
@@ -2138,7 +2229,7 @@ body.lock {
     }
 }
 
-@keyframes stars {
+@keyframes sila__btn {
     0% {
       transform: translateX(0);
     }
@@ -2241,29 +2332,26 @@ body.lock {
 }
 
 @media (min-width: 1290px) {
-  .header {
+  .header.anim {
+    opacity: 0;
     -webkit-animation-name: header;
     animation-name: header;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-    -webkit-animation-fill-mode: none;
-    animation-fill-mode: none;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
   }
 
 @-webkit-keyframes header {
     0% {
-      opacity: 0;
-    }
-
-    80% {
       opacity: 0;
     }
 
@@ -2277,16 +2365,12 @@ body.lock {
       opacity: 0;
     }
 
-    80% {
-      opacity: 0;
-    }
-
     100% {
       opacity: 1;
     }
 }
 
-  .sila__thumbs-wrap {
+  .sila__thumbs-wrap.anim {
     transform: translateX(1500px);
     opacity: 0;
     -webkit-animation-name: sila__thumbs-wrap;
@@ -2295,8 +2379,8 @@ body.lock {
     animation-duration: 0.5s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
@@ -2327,34 +2411,30 @@ body.lock {
     }
 }
 
-  .sila__top {
+  .sila__top.anim {
     -webkit-animation-name: sila__top;
     animation-name: sila__top;
     -webkit-animation-duration: 0.6s;
     animation-duration: 0.6s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-    -webkit-animation-fill-mode: none;
-    animation-fill-mode: none;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
   }
 
 @-webkit-keyframes sila__top {
     0% {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
 
     80% {
       transform: scale(0.9);
-    }
-
-    90% {
-
     }
 
     100% {
@@ -2364,15 +2444,11 @@ body.lock {
 
 @keyframes sila__top {
     0% {
-      transform: scale(1.2);
+      transform: scale(1.1);
     }
 
     80% {
       transform: scale(0.9);
-    }
-
-    90% {
-
     }
 
     100% {
@@ -2380,38 +2456,27 @@ body.lock {
     }
 }
 
-  .sila__title {
+  .sila__title.anim {
+    transform: translateX(-40%);
     -webkit-animation-name: sila__title;
     animation-name: sila__title;
     -webkit-animation-duration: 1.3s;
     animation-duration: 1.3s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
     animation-direction: alternate;
-    -webkit-animation-fill-mode: none;
-    animation-fill-mode: none;
+    -webkit-animation-fill-mode: forwards;
+    animation-fill-mode: forwards;
   }
 
 @-webkit-keyframes sila__title {
     0% {
-      transform: translateX(-10%);
-    }
-
-    20% {
-      transform: translateX(0%);
-    }
-
-    40% {
-      transform: translateX(4%);
-    }
-
-    60% {
-      transform: translateX(0%);
+      transform: translateX(-40%);
     }
 
     80% {
@@ -2425,19 +2490,7 @@ body.lock {
 
 @keyframes sila__title {
     0% {
-      transform: translateX(-10%);
-    }
-
-    20% {
-      transform: translateX(0%);
-    }
-
-    40% {
-      transform: translateX(4%);
-    }
-
-    60% {
-      transform: translateX(0%);
+      transform: translateX(-40%);
     }
 
     80% {
@@ -2449,15 +2502,15 @@ body.lock {
     }
 }
 
-  .sila__subtitle {
+  .sila__subtitle.anim {
     -webkit-animation-name: sila__subtitle;
     animation-name: sila__subtitle;
     -webkit-animation-duration: 1s;
     animation-duration: 1s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-delay: 0s;
-    animation-delay: 0s;
+    -webkit-animation-delay: 5s;
+    animation-delay: 5s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
@@ -2494,7 +2547,7 @@ body.lock {
     }
 }
 
-  .sila__button-cont {
+  .sila__button-cont.anim {
     transform: translateX(-10%);
     opacity: 0;
     -webkit-animation-name: sila__button-cont;
@@ -2503,8 +2556,8 @@ body.lock {
     animation-duration: 1s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-delay: 1.5s;
-    animation-delay: 1.5s;
+    -webkit-animation-delay: 6.5s;
+    animation-delay: 6.5s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
@@ -2575,8 +2628,8 @@ body.lock {
   }
 
   .suggestion__item--attantion.active-anim {
-    -webkit-animation-name: stars;
-    animation-name: stars;
+    -webkit-animation-name: suggestion__item;
+    animation-name: suggestion__item;
     -webkit-animation-duration: 0.6s;
     animation-duration: 0.6s;
     -webkit-animation-timing-function: linear;
@@ -2591,7 +2644,7 @@ body.lock {
     animation-fill-mode: forwards;
   }
 
-@-webkit-keyframes stars {
+@-webkit-keyframes suggestion__item {
     0% {
       transform: scale(0.7);
     }
@@ -2605,7 +2658,7 @@ body.lock {
     }
 }
 
-@keyframes stars {
+@keyframes suggestion__item {
     0% {
       transform: scale(0.7);
     }
@@ -2651,7 +2704,7 @@ body.lock {
 }
 
 @media (min-width: 1750px) {
-  .sila__navigations {
+  .sila__navigations.anim {
     transform: translateX(50%);
     opacity: 0;
     -webkit-animation-name: sila__navigations;
@@ -2660,8 +2713,8 @@ body.lock {
     animation-duration: 0.5s;
     -webkit-animation-timing-function: linear;
     animation-timing-function: linear;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -webkit-animation-delay: 6s;
+    animation-delay: 6s;
     -webkit-animation-iteration-count: 1;
     animation-iteration-count: 1;
     -webkit-animation-direction: alternate;
@@ -2716,7 +2769,7 @@ body.lock {
 }
 
 @media (max-width: 1750px) {
-  .sila__thumbs-wrap {
+  .sila__thumbs-wrap.anim {
     transform: translateX(-1500);
     width: 100%;
   }
