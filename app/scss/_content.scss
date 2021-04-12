@@ -788,6 +788,7 @@
 		text-transform: uppercase;
 		padding-left: 30px;
 		padding-top: 10px;
+		transition: all 0.3s ease 0s;
 		& img {
 			position: absolute;
 			top: 0;
@@ -819,27 +820,7 @@
 		}
 		@media (min-width: 991.98px) {
 			&:hover {
-				animation-name: sila__btn;
-				animation-duration: 0.3s;
-				animation-timing-function: linear;
-				animation-delay: 5s;
-				animation-iteration-count: 1;
-				animation-direction: alternate;
-				animation-fill-mode: forwards;
-				@keyframes sila__btn {
-					0% {
-						transform: translateX(0);
-					}
-					50% {
-						transform: translateX(10px);
-					}
-					80% {
-						transform: translateX(-5px);
-					}
-					100% {
-						transform: translateX(0);
-					}
-				}
+				transform: translateX(-5px);
 			}
 		};
 		@media (max-width: 767.98px) {
@@ -1342,14 +1323,6 @@
 		}
 		& span {
 			font-weight: 500;
-		}
-		&--border {
-			margin-top: 30px;
-			margin-bottom: 50px;
-			@media (max-width: 1470px) {
-				margin-top: calc(15px + (30 - 15) * ((100vw - 320px) / (1470 - 320)));
-				margin-bottom: calc(30px + (50 - 30) * ((100vw - 320px) / (1470 - 320)));
-			};
 		}
 	}
 	// .cards__heading

@@ -50,55 +50,53 @@ document.addEventListener('DOMContentLoaded', () => {
 	});
 ///////end smooth scroll////////
 ///start main screen animation
-	const mainScreenAnimLayer = document.querySelector('.main-screen-animate'),
-		headerAnim = document.querySelector('.header'),
-		shadowAnim = document.querySelector('.sila__inner'),
-		thumbsAnim = document.querySelector('.sila__thumbs-wrap'),
-		sliderAnim = document.querySelector('.sila__top'),
-		navigationsAnim = document.querySelector('.sila__navigations'),
-		titleAnim = document.querySelector('.sila__title'),
-		subTitleAnim = document.querySelector('.sila__subtitle'),
-		buttonAnim = document.querySelector('.sila__button-cont'),
-		screenWidth = window.screen.width;
+	// const mainScreenAnimLayer = document.querySelector('.main-screen-animate'),
+	// 	headerAnim = document.querySelector('.header'),
+	// 	shadowAnim = document.querySelector('.sila__inner'),
+	// 	thumbsAnim = document.querySelector('.sila__thumbs-wrap'),
+	// 	sliderAnim = document.querySelector('.sila__top'),
+	// 	navigationsAnim = document.querySelector('.sila__navigations'),
+	// 	titleAnim = document.querySelector('.sila__title'),
+	// 	subTitleAnim = document.querySelector('.sila__subtitle'),
+	// 	buttonAnim = document.querySelector('.sila__button-cont'),
+	// 	screenWidth = window.screen.width;
 
-	function removeBodyLock() {
-		body.classList.remove('lock');
-	}
+	// function removeBodyLock() {
+	// 	body.classList.remove('lock');
+	// }
 
-	function hideAnimate() {
+	// function hideAnimate() {
 
-		mainScreenAnimLayer.getBoundingClientRect().top;
-		if (mainScreenAnimLayer.getBoundingClientRect().top === 0 && screenWidth >= 1290 && screenWidth <= 1921) {
-			body.classList.add('lock');
-			setTimeout(removeBodyLock, 8000);
+	// 	mainScreenAnimLayer.getBoundingClientRect().top;
+	// 	if (mainScreenAnimLayer.getBoundingClientRect().top === 0 && screenWidth >= 1290) {
+	// 		body.classList.add('lock');
+	// 		setTimeout(removeBodyLock, 8000);
 
-			mainScreenAnimLayer.classList.add('anim');
-			shadowAnim.classList.add('anim');
-			headerAnim.classList.add('anim');
-			thumbsAnim.classList.add('anim');
-			sliderAnim.classList.add('anim');
-			navigationsAnim.classList.add('anim');
-			titleAnim.classList.add('anim');
-			subTitleAnim.classList.add('anim');
-			buttonAnim.classList.add('anim');
-			console.log('start');
-		} else {
-			mainScreenAnimLayer.classList.add('hide');
-			mainScreenAnimLayer.classList.remove('anim');
-			headerAnim.classList.remove('anim');
-			shadowAnim.classList.remove('anim');
-			thumbsAnim.classList.remove('anim');
-			sliderAnim.classList.remove('anim');
-			navigationsAnim.classList.remove('anim');
-			titleAnim.classList.remove('anim');
-			subTitleAnim.classList.remove('anim');
-			buttonAnim.classList.remove('anim');
-			console.log('stop');
-		}
-
-		console.log();
-	}
-	hideAnimate();
+	// 		mainScreenAnimLayer.classList.add('anim');
+	// 		shadowAnim.classList.add('anim');
+	// 		headerAnim.classList.add('anim');
+	// 		thumbsAnim.classList.add('anim');
+	// 		sliderAnim.classList.add('anim');
+	// 		navigationsAnim.classList.add('anim');
+	// 		titleAnim.classList.add('anim');
+	// 		subTitleAnim.classList.add('anim');
+	// 		buttonAnim.classList.add('anim');
+	// 		console.log('start');
+	// 	} else {
+	// 		mainScreenAnimLayer.classList.add('hide');
+	// 		mainScreenAnimLayer.classList.remove('anim');
+	// 		headerAnim.classList.remove('anim');
+	// 		shadowAnim.classList.remove('anim');
+	// 		thumbsAnim.classList.remove('anim');
+	// 		sliderAnim.classList.remove('anim');
+	// 		navigationsAnim.classList.remove('anim');
+	// 		titleAnim.classList.remove('anim');
+	// 		subTitleAnim.classList.remove('anim');
+	// 		buttonAnim.classList.remove('anim');
+	// 		console.log('stop');
+	// 	}
+	// }
+	// hideAnimate();
 
 	console.log();
 ///end main screen animation
