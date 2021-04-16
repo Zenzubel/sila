@@ -11,12 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
 		offset: 150,
 		reverse: true})
 	.setClassToggle(".header__inner", "active") // add class toggle
-	.addIndicators({
-			name: 'header scene',
-			colorTrigger: '#fff',//triggerHook
-			colorStart: 'red',//ofset
-			colorEnd: 'green'
-		})
+	// .addIndicators({
+	// 		name: 'header scene',
+	// 		colorTrigger: '#fff',//triggerHook
+	// 		colorStart: 'red',//ofset
+	// 		colorEnd: 'green'
+	// 	})
 	.addTo(controller);
 	//end scene
 	// start scene

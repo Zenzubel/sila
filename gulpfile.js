@@ -40,7 +40,7 @@ function cleanDist () {
 }
 
 function scripts () {
-	return src(['app/js/script/swiper/swiper.js', 'app/js/script/ScrollMagic/ScrollMagic.js', 'app/js/script/ScrollMagic/plugins/debug.addIndicators.js', 'app/js/popups.js'])
+	return src(['app/js/script/swiper/swiper.js', 'app/js/script/ScrollMagic/ScrollMagic.js', 'app/js/popups.js'])
 	.pipe(concat('libs.min.js'))
 	.pipe(uglify())
 	.pipe(dest('app/js'))

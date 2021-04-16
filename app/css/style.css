@@ -295,12 +295,7 @@ body.lock {
   transform: translateX(-50%);
   opacity: 1;
   height: 100vh;
-  z-index: 2000;
-}
-
-.main-screen-animate.hide {
-  z-index: -10;
-  opacity: 0;
+  z-index: 3000;
 }
 
 .title {
@@ -331,7 +326,7 @@ body.lock {
 
 .sw-image source,
 .sw-image img {
-  max-width: 100%;
+  width: 100%;
   -o-object-fit: cover;
   object-fit: cover;
   -o-object-position: center;
@@ -477,8 +472,8 @@ body.lock {
 }
 
 #main-animate-rect2_to {
-  -webkit-animation: main-animate-rect2_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect2_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect2_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect2_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect2_to__to {
@@ -526,8 +521,8 @@ body.lock {
 }
 
 #main-animate-rect2 {
-  -webkit-animation: main-animate-rect2_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect2_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect2_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect2_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect2_c_o {
@@ -567,8 +562,8 @@ body.lock {
 }
 
 #main-animate-rect3_to {
-  -webkit-animation: main-animate-rect3_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect3_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect3_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect3_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect3_to__to {
@@ -616,8 +611,8 @@ body.lock {
 }
 
 #main-animate-rect3 {
-  -webkit-animation: main-animate-rect3_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect3_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect3_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect3_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect3_c_o {
@@ -657,8 +652,8 @@ body.lock {
 }
 
 #main-animate-rect4_to {
-  -webkit-animation: main-animate-rect4_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect4_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect4_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect4_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect4_to__to {
@@ -706,8 +701,8 @@ body.lock {
 }
 
 #main-animate-rect4 {
-  -webkit-animation: main-animate-rect4_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect4_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect4_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect4_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect4_c_o {
@@ -747,8 +742,8 @@ body.lock {
 }
 
 #main-animate-rect5_to {
-  -webkit-animation: main-animate-rect5_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect5_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect5_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect5_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect5_to__to {
@@ -796,8 +791,8 @@ body.lock {
 }
 
 #main-animate-rect5 {
-  -webkit-animation: main-animate-rect5_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect5_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect5_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect5_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect5_c_o {
@@ -837,8 +832,8 @@ body.lock {
 }
 
 #main-animate-rect6_to {
-  -webkit-animation: main-animate-rect6_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect6_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect6_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect6_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect6_to__to {
@@ -886,8 +881,8 @@ body.lock {
 }
 
 #main-animate-rect6 {
-  -webkit-animation: main-animate-rect6_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect6_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect6_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect6_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect6_c_o {
@@ -927,8 +922,8 @@ body.lock {
 }
 
 #main-animate-rect7_to {
-  -webkit-animation: main-animate-rect7_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect7_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect7_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect7_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect7_to__to {
@@ -976,8 +971,8 @@ body.lock {
 }
 
 #main-animate-rect7 {
-  -webkit-animation: main-animate-rect7_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect7_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect7_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect7_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect7_c_o {
@@ -1017,8 +1012,8 @@ body.lock {
 }
 
 #main-animate-rect8_to {
-  -webkit-animation: main-animate-rect8_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect8_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect8_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect8_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect8_to__to {
@@ -1066,8 +1061,8 @@ body.lock {
 }
 
 #main-animate-rect8 {
-  -webkit-animation: main-animate-rect8_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect8_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect8_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect8_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect8_c_o {
@@ -1107,8 +1102,8 @@ body.lock {
 }
 
 #main-animate-rect9_to {
-  -webkit-animation: main-animate-rect9_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect9_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect9_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect9_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect9_to__to {
@@ -1156,8 +1151,8 @@ body.lock {
 }
 
 #main-animate-rect9 {
-  -webkit-animation: main-animate-rect9_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect9_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect9_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect9_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect9_c_o {
@@ -1197,8 +1192,8 @@ body.lock {
 }
 
 #main-animate-rect10_to {
-  -webkit-animation: main-animate-rect10_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect10_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect10_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect10_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect10_to__to {
@@ -1246,8 +1241,8 @@ body.lock {
 }
 
 #main-animate-rect10 {
-  -webkit-animation: main-animate-rect10_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect10_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect10_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect10_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect10_c_o {
@@ -1295,8 +1290,8 @@ body.lock {
 }
 
 #main-animate-rect11_to {
-  -webkit-animation: main-animate-rect11_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect11_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect11_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect11_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect11_to__to {
@@ -1344,8 +1339,8 @@ body.lock {
 }
 
 #main-animate-rect11 {
-  -webkit-animation: main-animate-rect11_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect11_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect11_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect11_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect11_c_o {
@@ -1385,8 +1380,8 @@ body.lock {
 }
 
 #main-animate-rect12_to {
-  -webkit-animation: main-animate-rect12_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect12_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect12_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect12_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect12_to__to {
@@ -1434,8 +1429,8 @@ body.lock {
 }
 
 #main-animate-rect12 {
-  -webkit-animation: main-animate-rect12_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect12_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect12_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect12_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect12_c_o {
@@ -1475,8 +1470,8 @@ body.lock {
 }
 
 #main-animate-rect13_to {
-  -webkit-animation: main-animate-rect13_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect13_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect13_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect13_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect13_to__to {
@@ -1524,8 +1519,8 @@ body.lock {
 }
 
 #main-animate-rect13 {
-  -webkit-animation: main-animate-rect13_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect13_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect13_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect13_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect13_c_o {
@@ -1565,8 +1560,8 @@ body.lock {
 }
 
 #main-animate-rect14_to {
-  -webkit-animation: main-animate-rect14_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect14_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect14_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect14_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect14_to__to {
@@ -1614,8 +1609,8 @@ body.lock {
 }
 
 #main-animate-rect14 {
-  -webkit-animation: main-animate-rect14_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect14_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect14_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect14_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect14_c_o {
@@ -1655,8 +1650,8 @@ body.lock {
 }
 
 #main-animate-rect15_to {
-  -webkit-animation: main-animate-rect15_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect15_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect15_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect15_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect15_to__to {
@@ -1704,8 +1699,8 @@ body.lock {
 }
 
 #main-animate-rect15 {
-  -webkit-animation: main-animate-rect15_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect15_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect15_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect15_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect15_c_o {
@@ -1745,8 +1740,8 @@ body.lock {
 }
 
 #main-animate-rect16_to {
-  -webkit-animation: main-animate-rect16_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect16_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect16_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect16_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect16_to__to {
@@ -1794,8 +1789,8 @@ body.lock {
 }
 
 #main-animate-rect16 {
-  -webkit-animation: main-animate-rect16_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect16_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect16_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect16_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect16_c_o {
@@ -1835,8 +1830,8 @@ body.lock {
 }
 
 #main-animate-rect17_to {
-  -webkit-animation: main-animate-rect17_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect17_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect17_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect17_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect17_to__to {
@@ -1884,8 +1879,8 @@ body.lock {
 }
 
 #main-animate-rect17 {
-  -webkit-animation: main-animate-rect17_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect17_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect17_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect17_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect17_c_o {
@@ -1925,8 +1920,8 @@ body.lock {
 }
 
 #main-animate-rect18_to {
-  -webkit-animation: main-animate-rect18_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect18_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect18_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect18_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect18_to__to {
@@ -1974,8 +1969,8 @@ body.lock {
 }
 
 #main-animate-rect18 {
-  -webkit-animation: main-animate-rect18_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect18_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect18_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect18_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect18_c_o {
@@ -2015,8 +2010,8 @@ body.lock {
 }
 
 #main-animate-rect19_to {
-  -webkit-animation: main-animate-rect19_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect19_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect19_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect19_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect19_to__to {
@@ -2064,8 +2059,8 @@ body.lock {
 }
 
 #main-animate-rect19 {
-  -webkit-animation: main-animate-rect19_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect19_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect19_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect19_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect19_c_o {
@@ -2105,8 +2100,8 @@ body.lock {
 }
 
 #main-animate-rect20_to {
-  -webkit-animation: main-animate-rect20_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect20_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect20_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect20_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect20_to__to {
@@ -2154,8 +2149,8 @@ body.lock {
 }
 
 #main-animate-rect20 {
-  -webkit-animation: main-animate-rect20_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect20_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect20_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect20_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect20_c_o {
@@ -2195,8 +2190,8 @@ body.lock {
 }
 
 #main-animate-rect21_to {
-  -webkit-animation: main-animate-rect21_to__to 6000ms linear 1 normal backwards;
-  animation: main-animate-rect21_to__to 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect21_to__to 6000ms linear 1 normal forwards;
+  animation: main-animate-rect21_to__to 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect21_to__to {
@@ -2244,8 +2239,8 @@ body.lock {
 }
 
 #main-animate-rect21 {
-  -webkit-animation: main-animate-rect21_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect21_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect21_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect21_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect21_c_o {
@@ -2285,8 +2280,8 @@ body.lock {
 }
 
 #main-animate-rect22_ts {
-  -webkit-animation: main-animate-rect22_ts__ts 6000ms linear 1 normal backwards;
-  animation: main-animate-rect22_ts__ts 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect22_ts__ts 6000ms linear 1 normal forwards;
+  animation: main-animate-rect22_ts__ts 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect22_ts__ts {
@@ -2311,7 +2306,7 @@ body.lock {
   }
 
   100% {
-    transform: translate(959.73px, 522.50998px) scale(1, 25);
+    transform: translate(959.73px, 522.50998px) scale(1, 30);
   }
 }
 
@@ -2337,13 +2332,13 @@ body.lock {
   }
 
   100% {
-    transform: translate(959.73px, 522.50998px) scale(1, 25);
+    transform: translate(959.73px, 522.50998px) scale(1, 30);
   }
 }
 
 #main-animate-rect22 {
-  -webkit-animation: main-animate-rect22_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-rect22_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-rect22_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-rect22_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-rect22_c_o {
@@ -2415,8 +2410,8 @@ body.lock {
 }
 
 #main-animate-g3_ts {
-  -webkit-animation: main-animate-g3_ts__ts 6000ms linear 1 normal backwards;
-  animation: main-animate-g3_ts__ts 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-g3_ts__ts 6000ms linear 1 normal forwards;
+  animation: main-animate-g3_ts__ts 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-g3_ts__ts {
@@ -2472,8 +2467,8 @@ body.lock {
 }
 
 #main-animate-g3 {
-  -webkit-animation: main-animate-g3_c_o 6000ms linear 1 normal backwards;
-  animation: main-animate-g3_c_o 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-g3_c_o 6000ms linear 1 normal forwards;
+  animation: main-animate-g3_c_o 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-g3_c_o {
@@ -2521,8 +2516,8 @@ body.lock {
 }
 
 #main-animate-polygon1_tr {
-  -webkit-animation: main-animate-polygon1_tr__tr 6000ms linear 1 normal backwards;
-  animation: main-animate-polygon1_tr__tr 6000ms linear 1 normal backwards;
+  -webkit-animation: main-animate-polygon1_tr__tr 6000ms linear 1 normal forwards;
+  animation: main-animate-polygon1_tr__tr 6000ms linear 1 normal forwards;
 }
 
 @-webkit-keyframes main-animate-polygon1_tr__tr {
@@ -2616,6 +2611,10 @@ body.lock {
   height: 100%;
   background-color: #1a1a1c;
   box-shadow: 0 7px 9px rgba(0, 0, 0, 0.25);
+}
+
+.header__wrapper.hide-layout:after {
+  display: none;
 }
 
 .header__inner {
@@ -2900,6 +2899,7 @@ body.lock {
 
 .sila__wrap--vertical {
   flex-direction: column;
+  overflow: hidden;
 }
 
 .sila__item {
@@ -3411,9 +3411,14 @@ body.lock {
   padding: 18px;
 }
 
+.cards__item.hide {
+  display: none;
+}
+
 .cards__item-inner {
   overflow: hidden;
   position: relative;
+  z-index: 0;
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -3525,6 +3530,18 @@ body.lock {
   margin-bottom: 30px;
 }
 
+.cards__more-card {
+  position: relative;
+  z-index: 1;
+  width: 100%;
+  padding: 15px 0;
+  text-align: center;
+  background-color: #282834;
+  color: #f36036;
+  font-size: 40px;
+  margin-top: 30px;
+}
+
 .cards__close-discription {
   position: absolute;
   bottom: -100%;
@@ -3598,6 +3615,10 @@ body.lock {
   box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
 }
 
+.cards__color--white {
+  background-color: #fff;
+}
+
 .cards__color--grey {
   background-color: #9c9c9c;
 }
@@ -3663,6 +3684,55 @@ body.lock {
   content: "руб";
   top: 0;
   right: 0;
+}
+
+.cards__num:after {
+  position: absolute;
+  top: -27px;
+  left: 0;
+  font-size: 16px;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.cards__num--grey:after {
+  content: 'Цвет серый';
+}
+
+.cards__num--red:after {
+  content: 'Цвет красный';
+}
+
+.cards__num--brown:after {
+  content: 'Цвет коричневый';
+}
+
+.cards__num--yellow:after {
+  content: 'Цвет жёлтый';
+}
+
+.cards__num--orange:after {
+  content: 'Цвет оранжевый';
+}
+
+.cards__num--beige:after {
+  content: 'Цвет бежевый';
+}
+
+.cards__num--black:after {
+  content: 'Цвет чёрный';
+}
+
+.cards__num--green:after {
+  content: 'Цвет зелёный';
+}
+
+.cards__num--white:after {
+  content: 'Цвет белый';
+}
+
+.cards__num--colormix:after {
+  content: 'Цвет colorMix';
 }
 
 .cards__num.active {
@@ -3841,6 +3911,10 @@ body.lock {
   width: 100%;
   height: 100%;
   z-index: 5;
+}
+
+.galary__image {
+  max-width: 451px;
 }
 
 .galary__works-btn,
@@ -4425,6 +4499,59 @@ body.lock {
     }
 }
 
+  .header__wrapper:after {
+    position: absolute;
+    content: "";
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: #24232c;
+    z-index: 2000;
+    -webkit-animation-name: header__wrapper-layout;
+    animation-name: header__wrapper-layout;
+    -webkit-animation-duration: 4s;
+    animation-duration: 4s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-delay: 0s;
+    animation-delay: 0s;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+    -webkit-animation-fill-mode: backwards;
+    animation-fill-mode: backwards;
+  }
+
+@-webkit-keyframes header__wrapper-layout {
+    0% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+}
+
+@keyframes header__wrapper-layout {
+    0% {
+      opacity: 1;
+    }
+
+    90% {
+      opacity: 1;
+    }
+
+    100% {
+      opacity: 0;
+    }
+}
+
   .sila__thumbs-wrap.anim {
     transform: translateX(1500px);
     opacity: 0;
@@ -4510,6 +4637,10 @@ body.lock {
       transform: scale(1);
     }
 }
+
+  .sila__title :last-child {
+    margin-left: 143px;
+  }
 
   .sila__title.anim {
     transform: translateX(-40%);
@@ -5015,6 +5146,10 @@ body.lock {
     font-size: calc(20px + (30 - 20) * ((100vw - 320px) / (1470 - 320)));
   }
 
+  .cards__num:after {
+    font-size: calc(12px + (16 - 12) * ((100vw - 320px) / (1470 - 320)));
+  }
+
   .cards__open {
     font-size: calc(16px + (22 - 16) * ((100vw - 320px) / (1470 - 320)));
   }
@@ -5423,6 +5558,10 @@ body.lock {
 
   .suggestion__row {
     display: block;
+  }
+
+  .cards__num:after {
+    top: -25px;
   }
 
   .borders__wrapper .container-fluid {

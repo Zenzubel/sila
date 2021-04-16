@@ -49,57 +49,7 @@ document.addEventListener('DOMContentLoaded', () => {
 		});
 	});
 ///////end smooth scroll////////
-///start main screen animation
-	// const mainScreenAnimLayer = document.querySelector('.main-screen-animate'),
-	// 	headerAnim = document.querySelector('.header'),
-	// 	shadowAnim = document.querySelector('.sila__inner'),
-	// 	thumbsAnim = document.querySelector('.sila__thumbs-wrap'),
-	// 	sliderAnim = document.querySelector('.sila__top'),
-	// 	navigationsAnim = document.querySelector('.sila__navigations'),
-	// 	titleAnim = document.querySelector('.sila__title'),
-	// 	subTitleAnim = document.querySelector('.sila__subtitle'),
-	// 	buttonAnim = document.querySelector('.sila__button-cont'),
-	// 	screenWidth = window.screen.width;
 
-	// function removeBodyLock() {
-	// 	body.classList.remove('lock');
-	// }
-
-	// function hideAnimate() {
-
-	// 	mainScreenAnimLayer.getBoundingClientRect().top;
-	// 	if (mainScreenAnimLayer.getBoundingClientRect().top === 0 && screenWidth >= 1290) {
-	// 		body.classList.add('lock');
-	// 		setTimeout(removeBodyLock, 8000);
-
-	// 		mainScreenAnimLayer.classList.add('anim');
-	// 		shadowAnim.classList.add('anim');
-	// 		headerAnim.classList.add('anim');
-	// 		thumbsAnim.classList.add('anim');
-	// 		sliderAnim.classList.add('anim');
-	// 		navigationsAnim.classList.add('anim');
-	// 		titleAnim.classList.add('anim');
-	// 		subTitleAnim.classList.add('anim');
-	// 		buttonAnim.classList.add('anim');
-	// 		console.log('start');
-	// 	} else {
-	// 		mainScreenAnimLayer.classList.add('hide');
-	// 		mainScreenAnimLayer.classList.remove('anim');
-	// 		headerAnim.classList.remove('anim');
-	// 		shadowAnim.classList.remove('anim');
-	// 		thumbsAnim.classList.remove('anim');
-	// 		sliderAnim.classList.remove('anim');
-	// 		navigationsAnim.classList.remove('anim');
-	// 		titleAnim.classList.remove('anim');
-	// 		subTitleAnim.classList.remove('anim');
-	// 		buttonAnim.classList.remove('anim');
-	// 		console.log('stop');
-	// 	}
-	// }
-	// hideAnimate();
-
-	console.log();
-///end main screen animation
 /////////start galary cards price switch
 	const tabParent = document.querySelectorAll('.cards__search'); /// + use in popup slider
 
@@ -561,7 +511,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 				const source = item.firstElementChild;
 				const src = item.lastElementChild;
-				item
+				
 				getItemParent.innerHTML += `
 				<div class="popup-slider__item">
 					<picture class="popup-slider__image">
@@ -575,6 +525,62 @@ document.addEventListener('DOMContentLoaded', () => {
 		}
 	});
 //end light-box for galary
+///start cards range
+	const cardsParent = document.querySelectorAll('.cards');
 
+	const standartParent = document.querySelector('.cards__row--standart'), 
+			standartCards = standartParent.querySelectorAll('.cards__item');
+
+	const сlassicParent = document.querySelector('.cards__row--classic'), 
+			сlassicCards = сlassicParent.querySelectorAll('.cards__item');
+
+	const premiumParent = document.querySelector('.cards__row--premium'), 
+			premiumCards = premiumParent.querySelectorAll('.cards__item');
+
+	function rengeCards(cards, length, parent) {
+		let countCard = 3;
+
+		const button = document.createElement('button');
+			button.className = 'cards__more-card';
+			button.innerText = `Показать еще ${length - countCard} вариантов`;
+			parent.after(button);
+		const buttonMore = document.querySelectorAll('.cards__more-card');
+
+		function showCard(countCard) {
+			cards.forEach((card, i)=> {
+				card = (i < countCard) ? card.classList.remove('hide') : card.classList.add('hide');
+			});
+		}
+		showCard(countCard);
+
+		cardsParent.forEach((item, i)=> {
+			item.addEventListener('click', (event) => {
+				const target = event.target;
+				event.preventDefault();
+				if (target && target.classList.contains('cards__more-card')) {
+					
+					buttonMore.forEach((item, i) => {
+						if (target == item) {
+							// showCard(item.previousSibling.children.length);
+							if(item.previousSibling.lastElementChild.classList.contains('hide')){
+								showCard(item.previousSibling.children.length);
+								button.innerText = `Свернуть карточку`;
+							} else {
+								showCard(countCard);
+								button.innerText = `Показать еще ${length - countCard} вариантов`;
+							}
+						}
+					});
+				}
+			});
+		});
+
+		
+	}
+	rengeCards(standartCards, standartCards.length, standartParent);
+	rengeCards(сlassicCards, сlassicCards.length, сlassicParent);
+	rengeCards(premiumCards, premiumCards.length, premiumParent);
+
+///end cards range
 
 });
